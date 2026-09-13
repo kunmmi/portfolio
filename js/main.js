@@ -378,6 +378,7 @@ let openPreview;
     },
     {
       title:  'Whisper — Real-time Chat',
+      image:  'assets/whisper-thumb.jpg',
       desc:   'Full-stack real-time messaging platform. Private 1-on-1 and group chats (up to 50 members), typing indicators, read receipts, offline message queuing, JWT auth, and paginated history. Built across 6 phases with comprehensive test suites.',
       tech:   ['Node.js', 'Socket.IO', 'Express', 'JWT', 'React', 'SQLite'],
       github: 'https://github.com/kunmmi/whisper',
