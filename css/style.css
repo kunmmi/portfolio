@@ -214,6 +214,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   position: relative;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .photo-panel {
@@ -552,7 +553,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .nav-burger { display: block; }
 
   .hero-inner { grid-template-columns: 1fr; gap: 50px; }
-  .hero-visual { order: -1; max-width: 320px; margin: 0 auto; }
+  .hero-visual { order: -1; }
+  .hero-visual .photo-panel { max-width: 320px; margin: 0 auto; }
   .hero { padding-top: 110px; text-align: left; }
 
   .stats { grid-template-columns: repeat(2, 1fr); row-gap: 34px; }
@@ -563,7 +565,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 @media (max-width: 560px) {
   .hero { padding: 100px 6vw 60px; }
-  .photo-panel { max-width: 260px; }
+  .hero-visual .photo-panel { max-width: 260px; }
   .float-card--status { left: 0; top: -4%; }
   .float-card--project { right: 0; bottom: -6%; max-width: 180px; }
   .hero-cta { flex-direction: column; align-items: stretch; }
