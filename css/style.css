@@ -146,11 +146,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   flex-direction: column;
   gap: 4px;
   margin-top: 16px;
-  padding-top: 16px;
+  padding: 16px 4px 4px;
   border-top: 1px solid var(--line);
 }
 .nav-mobile a { padding: 10px 4px; font-size: 15px; color: var(--text-soft); }
-.nav-mobile.open { display: flex; }
+.nav-mobile.open {
+  display: flex;
+  background: rgba(20, 17, 13, 0.96);
+  backdrop-filter: blur(14px);
+  margin: 16px -6vw -20px;
+  padding: 16px 6vw 20px;
+}
 
 /* ── Hero ───────────────────────────────────── */
 .hero {
