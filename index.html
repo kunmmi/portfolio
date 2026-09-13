@@ -8,223 +8,159 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- Custom cursor -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
-
-  <!-- Page Loader -->
-  <div class="loader" id="loader">
-    <div class="loader-inner">
-      <span class="loader-text">Initializing...</span>
-      <div class="loader-bar"><div class="loader-fill"></div></div>
-    </div>
-  </div>
-
-  <!-- Minimal nav: logo + resume only -->
+  <!-- ══ NAV ══ -->
   <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#" class="nav-logo">
-        <span class="logo-bracket">&lt;</span>OO<span class="logo-bracket">/&gt;</span>
+    <div class="nav-inner">
+      <a href="#top" class="nav-brand">Oluwabukunmi<span>.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener" class="nav-resume">
+        Resume <i class="fas fa-arrow-up-right-from-square"></i>
       </a>
-      <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener" class="btn-nav">
-        <i class="fas fa-file-alt"></i> Resume
-      </a>
+      <button class="nav-burger" id="navBurger" aria-label="Menu"><i class="fas fa-bars"></i></button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+      <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener">Resume</a>
     </div>
   </nav>
 
-  <!-- ══ HERO — the only "section" ══ -->
-  <section class="hero" id="home">
-    <canvas id="particles"></canvas>
+  <!-- ══ HERO ══ -->
+  <header class="hero" id="top">
+    <div class="hero-inner">
 
-    <div class="hero-content">
-
-      <!-- Terminal card -->
-      <div class="terminal-window reveal">
-        <div class="terminal-header">
-          <span class="dot dot-red"></span>
-          <span class="dot dot-yellow"></span>
-          <span class="dot dot-green"></span>
-          <span class="terminal-title">bash — ~/oluwabukunmi</span>
+      <div class="hero-copy">
+        <span class="pill reveal"><i class="fa-solid fa-circle pill-dot"></i> Available for backend roles</span>
+        <h1 class="hero-name reveal">Oluwabukunmi<br>Odukoya</h1>
+        <p class="hero-tag reveal">Backend engineer building APIs that automate the tedious and power the complex — Python, Django, FastAPI, and Web3 &amp; DeFi systems that hold up under real money and real traffic.</p>
+        <div class="hero-cta reveal">
+          <a href="#work" class="btn btn-solid">View my work</a>
+          <a href="#contact" class="btn btn-outline">Get in touch</a>
         </div>
-        <div class="terminal-body">
-          <div class="terminal-line">
-            <span class="terminal-prompt">$ </span>
-            <span class="terminal-cmd">whoami</span>
-          </div>
-          <div class="terminal-output">
-            <p><span class="t-green">name</span>        : <span class="t-cyan">Oluwabukunmi Odukoya</span></p>
-            <p><span class="t-green">role</span>        : <span class="t-cyan">Backend Engineer</span></p>
-            <p><span class="t-green">stack</span>       : <span class="t-cyan">Python · Django · FastAPI · TypeScript</span></p>
-            <p><span class="t-green">niche</span>       : <span class="t-cyan">APIs · Automation · Web3 &amp; DeFi</span></p>
-            <p><span class="t-green">open_to_work</span>: <span class="t-purple">true</span></p>
-          </div>
-          <div class="terminal-line">
-            <span class="terminal-prompt">$ </span>
-            <span class="terminal-cmd">cat mission.txt</span>
-          </div>
-          <div class="terminal-output">
-            <p id="typingText" class="t-white"></p>
-            <span class="cursor-blink">▋</span>
+        <div class="hero-socials reveal">
+          <a href="https://github.com/kunmmi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:bukunmiodukoya@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="photo-panel">
+          <img src="assets/headshot.png" alt="Oluwabukunmi Odukoya" class="photo-img" />
+        </div>
+        <div class="float-card float-card--status">
+          <span class="dot-live"></span> Open to work
+        </div>
+        <div class="float-card float-card--project">
+          <img src="assets/warden-thumb.jpg" alt="" />
+          <div>
+            <strong>Warden</strong>
+            <span>Trustless trading agents</span>
           </div>
         </div>
       </div>
 
-      <!-- CTAs -->
-      <div class="hero-cta reveal">
-        <button class="btn-primary" id="openProjectsBtn">
-          <i class="fas fa-code"></i> View My Projects
-        </button>
-        <button class="btn-secondary" id="openContactBtn">
-          <i class="fas fa-envelope"></i> Get In Touch
-        </button>
-      </div>
+    </div>
+    <div class="hero-fade"></div>
+  </header>
 
-      <!-- Social links -->
-      <div class="hero-socials reveal">
-        <a href="https://github.com/kunmmi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:bukunmiodukoya@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-      </div>
-
+  <!-- ══ STATS ══ -->
+  <section class="stats reveal-group">
+    <div class="stat reveal">
+      <span class="stat-num">100+</span>
+      <span class="stat-label">Repos shipped</span>
+    </div>
+    <div class="stat reveal">
+      <span class="stat-num">9</span>
+      <span class="stat-label">Featured projects</span>
+    </div>
+    <div class="stat reveal">
+      <span class="stat-num">Web3</span>
+      <span class="stat-label">&amp; DeFi focus</span>
+    </div>
+    <div class="stat reveal">
+      <span class="stat-num">0</span>
+      <span class="stat-label">Excuses for downtime</span>
     </div>
   </section>
 
-  <!-- ══ PROJECTS OVERLAY ══
-       Opens when "View My Projects" is clicked.
-       Hero blurs behind; 3-D carousel slides up.
-  -->
-  <div class="pov" id="projectsOverlay" aria-hidden="true" aria-label="Projects showcase">
-
-    <div class="pov-inner">
-
-      <!-- Header row: label + close -->
-      <div class="pov-header">
-        <span class="pov-label">// projects</span>
-        <button class="pov-close" id="closeProjectsBtn" aria-label="Close projects">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-
-      <!-- 3-D Carousel -->
-      <div class="show-wrap">
-        <div class="show-viewport">
-          <div class="show-track" id="showTrack"></div>
+  <!-- ══ ABOUT ══ -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="section-eyebrow reveal">// about</div>
+      <h2 class="about-head reveal">I build the backend that doesn't page you at 3am.</h2>
+      <div class="about-body reveal">
+        <p>
+          I work at the layer users never see — the APIs, the database policies, the cron
+          jobs, the webhook signatures — where a quiet bug turns into a very loud incident.
+          My focus is Python (Django, FastAPI) and TypeScript backends, with a specific pull
+          toward Web3 and DeFi products, where "the backend is wrong" can mean real money
+          moving to the wrong place.
+        </p>
+        <div class="chip-row">
+          <span class="chip">Row-Level Security hardening</span>
+          <span class="chip">Webhook signature verification</span>
+          <span class="chip">Redis-backed rate limiting</span>
+          <span class="chip">On-chain policy enforcement</span>
+          <span class="chip">CI/CD &amp; deploy pipelines</span>
         </div>
-        <button class="show-arrow show-arrow--prev" id="showPrev" aria-label="Previous project">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="show-arrow show-arrow--next" id="showNext" aria-label="Next project">
-          <i class="fas fa-chevron-right"></i>
-        </button>
-      </div>
-
-      <!-- Info below cards -->
-      <div class="show-meta">
-        <div class="show-meta-top">
-          <h3 class="show-title" id="showTitle"></h3>
-          <span class="show-badge" id="showBadge"></span>
-        </div>
-        <p class="show-desc" id="showDesc"></p>
-        <div class="show-meta-bottom">
-          <div class="show-tags"    id="showTags"></div>
-          <div class="show-actions" id="showActions"></div>
-        </div>
-      </div>
-
-      <!-- Dots + counter -->
-      <div class="show-nav-row">
-        <div class="show-dots" id="showDots"></div>
-        <span class="show-counter" id="showCounter">01 / 08</span>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- ══ CONTACT OVERLAY ══ -->
-  <div class="cov" id="contactOverlay" aria-hidden="true">
-    <div class="cov-backdrop" id="contactBackdrop"></div>
-    <div class="cov-card">
-      <button class="cov-close" id="closeContactBtn" aria-label="Close">
-        <i class="fas fa-times"></i>
-      </button>
-      <h2 class="cov-title">Let's build together.</h2>
-      <p class="cov-sub">
-        Actively looking for backend engineering roles.<br>
-        Reach out through any channel below.
-      </p>
-      <div class="contact-links">
-        <a href="mailto:bukunmiodukoya@gmail.com" class="c-link">
-          <i class="fas fa-envelope"></i>
-          <span>bukunmiodukoya@gmail.com</span>
-          <i class="fas fa-arrow-right c-arrow"></i>
-        </a>
-        <a href="tel:+2347073394962" class="c-link">
-          <i class="fas fa-phone"></i>
-          <span>+234 707 339 4962</span>
-          <i class="fas fa-arrow-right c-arrow"></i>
-        </a>
-        <a href="https://github.com/kunmmi" target="_blank" rel="noopener" class="c-link">
-          <i class="fab fa-github"></i>
-          <span>github.com/kunmmi</span>
-          <i class="fas fa-arrow-right c-arrow"></i>
-        </a>
-        <a href="https://linkedin.com/" target="_blank" rel="noopener" class="c-link">
-          <i class="fab fa-linkedin"></i>
-          <span>linkedin.com/in/oluwabukunmi-odukoya</span>
-          <i class="fas fa-arrow-right c-arrow"></i>
-        </a>
-        <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener" class="c-link">
-          <i class="fas fa-file-alt"></i>
-          <span>Download Resume (PDF)</span>
-          <i class="fas fa-arrow-right c-arrow"></i>
-        </a>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- ══ PREVIEW MODAL (per-project detail) ══ -->
-  <div class="preview-modal" id="previewModal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="preview-backdrop" id="previewBackdrop"></div>
-    <div class="preview-container">
-      <div class="preview-chrome">
-        <div class="preview-chrome-left">
-          <button class="preview-close-btn" id="previewClose" title="Close" aria-label="Close">
-            <i class="fas fa-times"></i>
-          </button>
-          <span class="preview-project-label" id="previewTitle">Project</span>
-        </div>
-        <div class="preview-address-bar">
-          <i class="fas fa-lock preview-lock"></i>
-          <span id="previewUrlText" class="preview-url"></span>
-        </div>
-        <div class="preview-chrome-right">
-          <a id="previewGithubBtn" href="#" target="_blank" rel="noopener" class="preview-chrome-btn">
-            <i class="fab fa-github"></i> Code
-          </a>
-          <a id="previewLiveBtn" href="#" target="_blank" rel="noopener" class="preview-chrome-btn preview-chrome-btn--primary">
-            <i class="fas fa-external-link-alt"></i> Full Site
-          </a>
-        </div>
+  <!-- ══ WORK ══ -->
+  <section class="work" id="work">
+    <div class="section-eyebrow reveal">// selected work</div>
+    <h2 class="work-head reveal">Projects</h2>
+    <div class="project-grid" id="projectGrid"></div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="section-eyebrow reveal">// contact</div>
+      <h2 class="contact-head reveal">Let's build something together.</h2>
+      <p class="contact-sub reveal">Actively looking for backend engineering roles. Reach out through any channel below.</p>
+      <a href="mailto:bukunmiodukoya@gmail.com" class="contact-email reveal">bukunmiodukoya@gmail.com</a>
+      <div class="contact-links reveal">
+        <a href="tel:+2347073394962" class="contact-link"><i class="fas fa-phone"></i> +234 707 339 4962</a>
+        <a href="https://github.com/kunmmi" target="_blank" rel="noopener" class="contact-link"><i class="fab fa-github"></i> github.com/kunmmi</a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener" class="contact-link"><i class="fas fa-file-arrow-down"></i> Resume (PDF)</a>
       </div>
-      <div class="preview-body">
-        <div class="preview-loader" id="previewLoader">
-          <div class="preview-spinner-ring"></div>
-          <p>Loading preview…</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <span>&copy; <span id="year"></span> Oluwabukunmi Odukoya</span>
+    <span>Built by hand in Ibadan, Nigeria.</span>
+  </footer>
+
+  <!-- ══ PROJECT MODAL ══ -->
+  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card">
+      <button class="modal-close" id="modalClose" aria-label="Close"><i class="fas fa-times"></i></button>
+      <div class="modal-media" id="modalMedia"></div>
+      <div class="modal-body">
+        <div class="modal-top">
+          <h3 id="modalTitle"></h3>
+          <span class="modal-badge" id="modalBadge"></span>
         </div>
-        <iframe
-          id="previewFrame"
-          src="about:blank"
-          title="Live project preview"
-          sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
-          loading="lazy"
-        ></iframe>
-        <div class="preview-details-panel" id="previewDetailsPanel" style="display:none;"></div>
+        <p id="modalDesc"></p>
+        <div class="chip-row" id="modalTech"></div>
+        <div class="modal-actions" id="modalActions"></div>
       </div>
     </div>
   </div>
