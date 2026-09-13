@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Oluwabukunmi Odukoya – Backend Engineer. Python, Django, FastAPI, Web3 &amp; DeFi. Based in Ibadan, Nigeria." />
+  <title>Oluwabukunmi Odukoya | Backend Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Page Loader -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <span class="loader-text">Initializing...</span>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Minimal nav: logo + resume only -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>OO<span class="logo-bracket">/&gt;</span>
+      </a>
+      <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener" class="btn-nav">
+        <i class="fas fa-file-alt"></i> Resume
+      </a>
+    </div>
+  </nav>
+
+  <!-- ══ HERO — the only "section" ══ -->
+  <section class="hero" id="home">
+    <canvas id="particles"></canvas>
+
+    <div class="hero-content">
+
+      <!-- Terminal card -->
+      <div class="terminal-window reveal">
+        <div class="terminal-header">
+          <span class="dot dot-red"></span>
+          <span class="dot dot-yellow"></span>
+          <span class="dot dot-green"></span>
+          <span class="terminal-title">bash — ~/oluwabukunmi</span>
+        </div>
+        <div class="terminal-body">
+          <div class="terminal-line">
+            <span class="terminal-prompt">$ </span>
+            <span class="terminal-cmd">whoami</span>
+          </div>
+          <div class="terminal-output">
+            <p><span class="t-green">name</span>        : <span class="t-cyan">Oluwabukunmi Odukoya</span></p>
+            <p><span class="t-green">role</span>        : <span class="t-cyan">Backend Engineer</span></p>
+            <p><span class="t-green">stack</span>       : <span class="t-cyan">Python · Django · FastAPI · TypeScript</span></p>
+            <p><span class="t-green">niche</span>       : <span class="t-cyan">APIs · Automation · Web3 &amp; DeFi</span></p>
+            <p><span class="t-green">open_to_work</span>: <span class="t-purple">true</span></p>
+          </div>
+          <div class="terminal-line">
+            <span class="terminal-prompt">$ </span>
+            <span class="terminal-cmd">cat mission.txt</span>
+          </div>
+          <div class="terminal-output">
+            <p id="typingText" class="t-white"></p>
+            <span class="cursor-blink">▋</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTAs -->
+      <div class="hero-cta reveal">
+        <button class="btn-primary" id="openProjectsBtn">
+          <i class="fas fa-code"></i> View My Projects
+        </button>
+        <button class="btn-secondary" id="openContactBtn">
+          <i class="fas fa-envelope"></i> Get In Touch
+        </button>
+      </div>
+
+      <!-- Social links -->
+      <div class="hero-socials reveal">
+        <a href="https://github.com/kunmmi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:bukunmiodukoya@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ PROJECTS OVERLAY ══
+       Opens when "View My Projects" is clicked.
+       Hero blurs behind; 3-D carousel slides up.
+  -->
+  <div class="pov" id="projectsOverlay" aria-hidden="true" aria-label="Projects showcase">
+
+    <div class="pov-inner">
+
+      <!-- Header row: label + close -->
+      <div class="pov-header">
+        <span class="pov-label">// projects</span>
+        <button class="pov-close" id="closeProjectsBtn" aria-label="Close projects">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- 3-D Carousel -->
+      <div class="show-wrap">
+        <div class="show-viewport">
+          <div class="show-track" id="showTrack"></div>
+        </div>
+        <button class="show-arrow show-arrow--prev" id="showPrev" aria-label="Previous project">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="show-arrow show-arrow--next" id="showNext" aria-label="Next project">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Info below cards -->
+      <div class="show-meta">
+        <div class="show-meta-top">
+          <h3 class="show-title" id="showTitle"></h3>
+          <span class="show-badge" id="showBadge"></span>
+        </div>
+        <p class="show-desc" id="showDesc"></p>
+        <div class="show-meta-bottom">
+          <div class="show-tags"    id="showTags"></div>
+          <div class="show-actions" id="showActions"></div>
+        </div>
+      </div>
+
+      <!-- Dots + counter -->
+      <div class="show-nav-row">
+        <div class="show-dots" id="showDots"></div>
+        <span class="show-counter" id="showCounter">01 / 08</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ CONTACT OVERLAY ══ -->
+  <div class="cov" id="contactOverlay" aria-hidden="true">
+    <div class="cov-backdrop" id="contactBackdrop"></div>
+    <div class="cov-card">
+      <button class="cov-close" id="closeContactBtn" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+      <h2 class="cov-title">Let's build together.</h2>
+      <p class="cov-sub">
+        Actively looking for backend engineering roles.<br>
+        Reach out through any channel below.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:bukunmiodukoya@gmail.com" class="c-link">
+          <i class="fas fa-envelope"></i>
+          <span>bukunmiodukoya@gmail.com</span>
+          <i class="fas fa-arrow-right c-arrow"></i>
+        </a>
+        <a href="tel:+2347073394962" class="c-link">
+          <i class="fas fa-phone"></i>
+          <span>+234 707 339 4962</span>
+          <i class="fas fa-arrow-right c-arrow"></i>
+        </a>
+        <a href="https://github.com/kunmmi" target="_blank" rel="noopener" class="c-link">
+          <i class="fab fa-github"></i>
+          <span>github.com/kunmmi</span>
+          <i class="fas fa-arrow-right c-arrow"></i>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener" class="c-link">
+          <i class="fab fa-linkedin"></i>
+          <span>linkedin.com/in/oluwabukunmi-odukoya</span>
+          <i class="fas fa-arrow-right c-arrow"></i>
+        </a>
+        <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener" class="c-link">
+          <i class="fas fa-file-alt"></i>
+          <span>Download Resume (PDF)</span>
+          <i class="fas fa-arrow-right c-arrow"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PREVIEW MODAL (per-project detail) ══ -->
+  <div class="preview-modal" id="previewModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="preview-backdrop" id="previewBackdrop"></div>
+    <div class="preview-container">
+      <div class="preview-chrome">
+        <div class="preview-chrome-left">
+          <button class="preview-close-btn" id="previewClose" title="Close" aria-label="Close">
+            <i class="fas fa-times"></i>
+          </button>
+          <span class="preview-project-label" id="previewTitle">Project</span>
+        </div>
+        <div class="preview-address-bar">
+          <i class="fas fa-lock preview-lock"></i>
+          <span id="previewUrlText" class="preview-url"></span>
+        </div>
+        <div class="preview-chrome-right">
+          <a id="previewGithubBtn" href="#" target="_blank" rel="noopener" class="preview-chrome-btn">
+            <i class="fab fa-github"></i> Code
+          </a>
+          <a id="previewLiveBtn" href="#" target="_blank" rel="noopener" class="preview-chrome-btn preview-chrome-btn--primary">
+            <i class="fas fa-external-link-alt"></i> Full Site
+          </a>
+        </div>
+      </div>
+      <div class="preview-body">
+        <div class="preview-loader" id="previewLoader">
+          <div class="preview-spinner-ring"></div>
+          <p>Loading preview…</p>
+        </div>
+        <iframe
+          id="previewFrame"
+          src="about:blank"
+          title="Live project preview"
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          loading="lazy"
+        ></iframe>
+        <div class="preview-details-panel" id="previewDetailsPanel" style="display:none;"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
