@@ -356,6 +356,7 @@ let openPreview;
       github: 'https://github.com/kunmmi/Predict-market',
       live:   'https://predict-market-xi.vercel.app',
       badge:  '🔮 Prediction Markets',
+      embedBlocked: true,
     },
     {
       title:  'FarmSquare Connect',
@@ -489,7 +490,28 @@ let openPreview;
     const thumb = document.createElement('div');
     thumb.className = 'show-thumb';
 
-    if (proj.live) {
+    if (proj.live && proj.embedBlocked) {
+      thumb.innerHTML = `
+        <div class="stl-chrome">
+          <div class="stl-dots"><span></span><span></span><span></span></div>
+          <div class="stl-url-bar"></div>
+        </div>
+        <div class="stl-body">
+          <div class="stl-hero"></div>
+          <div class="stl-line w90"></div>
+          <div class="stl-line w70"></div>
+          <div class="stl-line w55"></div>
+          <div class="stl-row">
+            <div class="stl-chip"></div>
+            <div class="stl-chip"></div>
+            <div class="stl-chip"></div>
+          </div>
+        </div>
+        <div class="thumb-lock-badge">
+          <i class="fas fa-lock"></i> Live preview blocked by its own <code>frame-ancestors: none</code> CSP
+        </div>`;
+
+    } else if (proj.live) {
       const iframe = document.createElement('iframe');
       iframe.dataset.src = proj.live;
       iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms');

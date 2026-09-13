@@ -809,6 +809,34 @@ body:has(button:hover) .cursor-follower {
 .show-thumb .tb-bar { flex-shrink: 0; }
 .show-thumb .thumb-code { height: calc(100% - 32px); }
 
+.thumb-lock-badge {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: rgba(10, 10, 16, 0.85);
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 11px;
+  line-height: 1.4;
+  backdrop-filter: blur(4px);
+}
+
+.thumb-lock-badge i {
+  color: #a855f7;
+  flex-shrink: 0;
+}
+
+.thumb-lock-badge code {
+  font-family: 'JetBrains Mono', monospace;
+  color: rgba(255, 255, 255, 0.85);
+}
+
 /* Arrow buttons */
 .show-arrow {
   position: absolute;
