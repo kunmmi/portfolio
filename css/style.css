@@ -809,6 +809,15 @@ body:has(button:hover) .cursor-follower {
 .show-thumb .tb-bar { flex-shrink: 0; }
 .show-thumb .thumb-code { height: calc(100% - 32px); }
 
+.thumb-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .thumb-lock-badge {
   position: absolute;
   left: 12px;

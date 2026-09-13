@@ -343,6 +343,7 @@ let openPreview;
   const PROJECTS = [
     {
       title:  'Warden — Trustless Trading Agents',
+      image:  'assets/warden-thumb.jpg',
       desc:   'A self-hosted autonomous trading agent for BNB Smart Chain — your keys never leave your machine, and every cap (per-trade, daily, ops/day, drawdown, key expiry) is enforced on-chain by an ERC-4337 account contract, not by promises. The agent proposes trades against a curated PancakeSwap v3 basket; deterministic policy code disposes — no model can ever construct calldata or move funds outside the wall. Ships with a live local dashboard, a "prove the wall" attack simulator, paper-trading mode against real prices, and full Telegram control (chat, alerts, even remote PC control) inside the same permission system.',
       tech:   ['TypeScript', 'ERC-4337', 'Solidity', 'PancakeSwap v3', 'Telegram Bot API', 'Node.js'],
       github: 'https://github.com/kunmmi/warden',
@@ -351,6 +352,7 @@ let openPreview;
     },
     {
       title:  'Predict Market',
+      image:  'assets/predict-market-thumb.jpg',
       desc:   'A crypto prediction market MVP with a full referral and commission system. Users fund in-app wallets, trade binary yes/no markets, and promoters earn commissions from referred trading. Backed by PostgreSQL via Supabase with Row-Level Security and cron-job settlement.',
       tech:   ['TypeScript', 'Next.js', 'PostgreSQL', 'Supabase', 'GitHub Actions'],
       github: 'https://github.com/kunmmi/Predict-market',
@@ -490,26 +492,20 @@ let openPreview;
     const thumb = document.createElement('div');
     thumb.className = 'show-thumb';
 
-    if (proj.live && proj.embedBlocked) {
-      thumb.innerHTML = `
-        <div class="stl-chrome">
-          <div class="stl-dots"><span></span><span></span><span></span></div>
-          <div class="stl-url-bar"></div>
-        </div>
-        <div class="stl-body">
-          <div class="stl-hero"></div>
-          <div class="stl-line w90"></div>
-          <div class="stl-line w70"></div>
-          <div class="stl-line w55"></div>
-          <div class="stl-row">
-            <div class="stl-chip"></div>
-            <div class="stl-chip"></div>
-            <div class="stl-chip"></div>
-          </div>
-        </div>
-        <div class="thumb-lock-badge">
-          <i class="fas fa-lock"></i> Live preview blocked by its own <code>frame-ancestors: none</code> CSP
-        </div>`;
+    if (proj.image) {
+      const img = document.createElement('img');
+      img.src = proj.image;
+      img.alt = `${proj.title} screenshot`;
+      img.loading = 'lazy';
+      img.className = 'thumb-img';
+      thumb.appendChild(img);
+
+      if (proj.embedBlocked) {
+        const badge = document.createElement('div');
+        badge.className = 'thumb-lock-badge';
+        badge.innerHTML = `<i class="fas fa-lock"></i> Live preview blocked by its own <code>frame-ancestors: none</code> CSP`;
+        thumb.appendChild(badge);
+      }
 
     } else if (proj.live) {
       const iframe = document.createElement('iframe');
