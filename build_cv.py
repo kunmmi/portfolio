@@ -183,15 +183,6 @@ story.append(KeepTogether([
 ]))
 
 story.append(KeepTogether([
-    Paragraph('Blockchain Developer', ST['role']),
-    Paragraph('Paycrest  |  Remote  |  May 2024 &ndash; August 2024', ST['co']),
-    bul('Implemented smart contracts on <b>Ethereum and Hyperledger</b>, boosting transaction efficiency by <b>30%</b> and cutting operational costs by <b>30%</b>.'),
-    bul('Contributed to a decentralised payment application, gaining deep hands-on experience with DeFi primitives, EVM architecture, and cross-chain patterns.'),
-    bul('Conducted 20+ code reviews per sprint, identifying critical bugs and driving measurable improvements in overall code quality.'),
-    bul('Collaborated with senior engineers on blockchain integration patterns and smart contract security best practices.'),
-]))
-
-story.append(KeepTogether([
     Paragraph('Backend Developer', ST['role']),
     Paragraph('Renager  |  Remote  |  August 2021 &ndash; October 2022', ST['co']),
     bul('Integrated third-party APIs and payment services, expanding platform functionality and improving user engagement.'),
