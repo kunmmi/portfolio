@@ -1,170 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Oluwabukunmi Odukoya – Backend Engineer. Python, Django, FastAPI, Web3 &amp; DeFi. Based in Ibadan, Nigeria." />
-  <title>Oluwabukunmi Odukoya | Backend Engineer</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Oluwabukunmi Odukoya — Backend engineer. Solidity, ERC-4337 account abstraction, BNB Smart Chain. Based in Ibadan, Nigeria." />
+<title>Oluwabukunmi Odukoya — Backend Engineer</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="css/style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Big+Shoulders:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- ══ NAV ══ -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-inner">
-      <a href="#top" class="nav-brand">Oluwabukunmi<span>.</span></a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#contact">Contact</a>
-      </div>
-      <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener" class="nav-resume">
-        Resume <i class="fas fa-arrow-up-right-from-square"></i>
-      </a>
-      <button class="nav-burger" id="navBurger" aria-label="Menu"><i class="fas fa-bars"></i></button>
+<!-- corner registration marks -->
+<div class="reg reg-tl">+</div>
+<div class="reg reg-tr">+</div>
+<div class="reg reg-bl">+</div>
+<div class="reg reg-br">+</div>
+
+<!-- ══ NAV ══ -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand">
+      <span class="nav-brand-mark">OO</span>
+      <span class="nav-brand-txt">Odukoya<em>.</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="#about"><span class="nav-num">01</span> About</a>
+      <a href="#work"><span class="nav-num">02</span> Work</a>
+      <a href="#experience"><span class="nav-num">03</span> Experience</a>
+      <a href="#contact"><span class="nav-num">04</span> Contact</a>
     </div>
-    <div class="nav-mobile" id="navMobile">
-      <a href="#about">About</a>
-      <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
-      <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener">Resume</a>
-    </div>
-  </nav>
+    <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener" class="nav-resume">
+      Résumé <span class="arrow">↗</span>
+    </a>
+    <button class="nav-burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#about">01 — About</a>
+    <a href="#work">02 — Work</a>
+    <a href="#experience">03 — Experience</a>
+    <a href="#contact">04 — Contact</a>
+    <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+  </div>
+</nav>
 
-  <!-- ══ HERO ══ -->
-  <header class="hero" id="top">
-    <div class="hero-inner">
+<!-- ══ HERO ══ -->
+<header class="hero" id="top">
+  <div class="blueprint-grid" aria-hidden="true"></div>
 
-      <div class="hero-copy">
-        <span class="pill reveal"><i class="fa-solid fa-circle pill-dot"></i> Available for backend roles</span>
-        <h1 class="hero-name reveal">Oluwabukunmi<br>Odukoya</h1>
-        <p class="hero-tag reveal">Backend engineer building APIs that automate the tedious and power the complex — Python, Django, FastAPI, and Web3 &amp; DeFi systems that hold up under real money and real traffic.</p>
-        <div class="hero-cta reveal">
-          <a href="#work" class="btn btn-solid">View my work</a>
-          <a href="#contact" class="btn btn-outline">Get in touch</a>
-        </div>
-        <div class="hero-socials reveal">
-          <a href="https://github.com/kunmmi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:bukunmiodukoya@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-        </div>
-      </div>
-
-      <div class="hero-visual reveal">
-        <div class="photo-panel">
-          <img src="assets/headshot.png" alt="Oluwabukunmi Odukoya" class="photo-img" />
-          <div class="float-card float-card--status">
-            <span class="dot-live"></span> Open to work
-          </div>
-          <div class="float-card float-card--project">
-            <img src="assets/warden-thumb.jpg" alt="" />
-            <div>
-              <strong>Warden</strong>
-              <span>Trustless trading agents</span>
-            </div>
-          </div>
-        </div>
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="dwg-tag reveal">
+        <span class="dwg-dot"></span>
+        DWG&nbsp;NO. OKO&#8209;2026&#8209;01 &nbsp;·&nbsp; STATUS: OPEN&nbsp;TO&nbsp;WORK
       </div>
 
-    </div>
-    <div class="hero-fade"></div>
-  </header>
+      <h1 class="hero-name reveal">
+        <span class="line">OLUWABUKUNMI</span>
+        <span class="line hero-name-accent">ODUKOYA</span>
+      </h1>
 
-  <!-- ══ STATS ══ -->
-  <section class="stats reveal-group">
-    <div class="stat reveal">
-      <span class="stat-num">100+</span>
-      <span class="stat-label">Repos shipped</span>
-    </div>
-    <div class="stat reveal">
-      <span class="stat-num">9</span>
-      <span class="stat-label">Featured projects</span>
-    </div>
-    <div class="stat reveal">
-      <span class="stat-num">Web3</span>
-      <span class="stat-label">&amp; DeFi focus</span>
-    </div>
-    <div class="stat reveal">
-      <span class="stat-num">0</span>
-      <span class="stat-label">Excuses for downtime</span>
-    </div>
-  </section>
+      <p class="hero-role reveal">Backend Engineer — Solidity · ERC&#8209;4337 · BNB&nbsp;Smart&nbsp;Chain</p>
 
-  <!-- ══ ABOUT ══ -->
-  <section class="about" id="about">
-    <div class="about-inner">
-      <div class="section-eyebrow reveal">// about</div>
-      <h2 class="about-head reveal">I build the backend that doesn't page you at 3am.</h2>
-      <div class="about-body reveal">
-        <p>
-          I work at the layer users never see — the APIs, the database policies, the cron
-          jobs, the webhook signatures — where a quiet bug turns into a very loud incident.
-          My focus is Python (Django, FastAPI) and TypeScript backends, with a specific pull
-          toward Web3 and DeFi products, where "the backend is wrong" can mean real money
-          moving to the wrong place.
-        </p>
-        <div class="chip-row">
-          <span class="chip">Row-Level Security hardening</span>
-          <span class="chip">Webhook signature verification</span>
-          <span class="chip">Redis-backed rate limiting</span>
-          <span class="chip">On-chain policy enforcement</span>
-          <span class="chip">CI/CD &amp; deploy pipelines</span>
-        </div>
+      <p class="hero-tag reveal">
+        I build the layer that makes on-chain systems trustworthy without asking anyone
+        to trust me: account-contract caps, TWAP-guarded pricing, and a policy wall a
+        compromised agent can't talk its way past.
+      </p>
+
+      <div class="hero-cta reveal">
+        <a href="#work" class="btn btn-solid">View selected work</a>
+        <a href="#contact" class="btn btn-outline">Get in touch</a>
+      </div>
+
+      <div class="hero-socials reveal">
+        <a href="https://github.com/kunmmi" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+        <a href="https://linkedin.com/in/oluwabukunmi-odukoya" target="_blank" rel="noopener" aria-label="LinkedIn">IN</a>
+        <a href="mailto:bukunmiodukoya@gmail.com" aria-label="Email">@</a>
       </div>
     </div>
-  </section>
 
-  <!-- ══ WORK ══ -->
-  <section class="work" id="work">
-    <div class="section-eyebrow reveal">// selected work</div>
-    <h2 class="work-head reveal">Projects</h2>
-    <div class="project-grid" id="projectGrid"></div>
-  </section>
+    <div class="hero-diagram reveal" aria-label="Diagram: how warden's on-chain policy wall enforces caps">
+      <svg viewBox="0 0 520 560" fill="none" xmlns="http://www.w3.org/2000/svg" class="schematic">
 
-  <!-- ══ CONTACT ══ -->
-  <section class="contact" id="contact">
-    <div class="contact-inner">
-      <div class="section-eyebrow reveal">// contact</div>
-      <h2 class="contact-head reveal">Let's build something together.</h2>
-      <p class="contact-sub reveal">Actively looking for backend engineering roles. Reach out through any channel below.</p>
-      <a href="mailto:bukunmiodukoya@gmail.com" class="contact-email reveal">bukunmiodukoya@gmail.com</a>
-      <div class="contact-links reveal">
-        <a href="tel:+2347073394962" class="contact-link"><i class="fas fa-phone"></i> +234 707 339 4962</a>
-        <a href="https://github.com/kunmmi" target="_blank" rel="noopener" class="contact-link"><i class="fab fa-github"></i> github.com/kunmmi</a>
-        <a href="https://linkedin.com/" target="_blank" rel="noopener" class="contact-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
-        <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener" class="contact-link"><i class="fas fa-file-arrow-down"></i> Resume (PDF)</a>
-      </div>
+        <!-- dimension line top -->
+        <line x1="20" y1="30" x2="500" y2="30" stroke="var(--line-dim)" stroke-width="1" stroke-dasharray="2 4"/>
+        <line x1="20" y1="22" x2="20" y2="38" stroke="var(--line-dim)" stroke-width="1"/>
+        <line x1="500" y1="22" x2="500" y2="38" stroke="var(--line-dim)" stroke-width="1"/>
+        <text x="260" y="20" text-anchor="middle" class="dim-label">FIG. 01 — POLICY WALL, END TO END</text>
+
+        <!-- box 1: strategist -->
+        <rect x="150" y="55" width="220" height="56" rx="2" class="node-box"/>
+        <text x="260" y="79" text-anchor="middle" class="node-label">STRATEGIST / TELEGRAM</text>
+        <text x="260" y="96" text-anchor="middle" class="node-sub">proposes an intent</text>
+
+        <!-- arrow down -->
+        <line x1="260" y1="111" x2="260" y2="150" class="flow-line"/>
+        <polygon points="260,158 254,146 266,146" class="flow-arrow"/>
+        <text x="278" y="140" class="flow-label">typed, closed enum</text>
+
+        <!-- box 2: policy wall (emphasized) -->
+        <rect x="110" y="160" width="300" height="86" rx="2" class="node-box node-box--wall"/>
+        <text x="260" y="188" text-anchor="middle" class="node-label node-label--wall">ON&#8209;CHAIN POLICY WALL</text>
+        <text x="260" y="206" text-anchor="middle" class="node-sub">per-trade · daily · ops/day · drawdown</text>
+        <text x="260" y="222" text-anchor="middle" class="node-sub">BreakerRegistry + KernelBreakerPolicy</text>
+        <rect x="110" y="160" width="300" height="86" rx="2" class="node-box-stamp"/>
+        <text x="392" y="252" text-anchor="end" class="stamp-text">CAPS ENFORCED</text>
+
+        <!-- arrow down -->
+        <line x1="260" y1="246" x2="260" y2="285" class="flow-line"/>
+        <polygon points="260,293 254,281 266,281" class="flow-arrow"/>
+        <text x="278" y="275" class="flow-label">quote simulation</text>
+
+        <!-- box 3: account contract -->
+        <rect x="130" y="295" width="260" height="56" rx="2" class="node-box"/>
+        <text x="260" y="319" text-anchor="middle" class="node-label">ACCOUNT CONTRACT</text>
+        <text x="260" y="336" text-anchor="middle" class="node-sub">ERC-4337 · Kernel v3.3 session key</text>
+
+        <!-- arrow down -->
+        <line x1="260" y1="351" x2="260" y2="390" class="flow-line"/>
+        <polygon points="260,398 254,386 266,386" class="flow-arrow"/>
+
+        <!-- box 4: venue -->
+        <rect x="150" y="400" width="220" height="56" rx="2" class="node-box"/>
+        <text x="260" y="424" text-anchor="middle" class="node-label">PANCAKESWAP V3</text>
+        <text x="260" y="441" text-anchor="middle" class="node-sub">15-min TWAP · depth floor</text>
+
+        <!-- side annotation bracket -->
+        <path d="M 425 160 L 440 160 L 440 246 L 425 246" class="bracket"/>
+        <text x="447" y="207" class="side-label" transform="rotate(90 447 207)">MY BUILD</text>
+
+        <!-- bottom dimension -->
+        <line x1="20" y1="500" x2="500" y2="500" stroke="var(--line-dim)" stroke-width="1" stroke-dasharray="2 4"/>
+        <text x="260" y="522" text-anchor="middle" class="dim-label">SCALE — N/A &nbsp;·&nbsp; CHAIN — BSC 56/97</text>
+      </svg>
     </div>
-  </section>
+  </div>
+</header>
 
-  <footer class="footer">
-    <span>&copy; <span id="year"></span> Oluwabukunmi Odukoya</span>
-    <span>Built by hand in Ibadan, Nigeria.</span>
-  </footer>
+<!-- ══ STATS STRIP ══ -->
+<section class="stats reveal-group">
+  <div class="stat reveal">
+    <span class="stat-num">4+</span>
+    <span class="stat-label">Years backend</span>
+  </div>
+  <div class="stat reveal">
+    <span class="stat-num">2</span>
+    <span class="stat-label">Custom Solidity contracts shipped</span>
+  </div>
+  <div class="stat reveal">
+    <span class="stat-num">ERC&#8209;4337</span>
+    <span class="stat-label">Account abstraction focus</span>
+  </div>
+  <div class="stat reveal">
+    <span class="stat-num">NG&nbsp;→&nbsp;∞</span>
+    <span class="stat-label">Ibadan, remote-ready</span>
+  </div>
+</section>
 
-  <!-- ══ PROJECT MODAL ══ -->
-  <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true">
-    <div class="modal-backdrop" id="modalBackdrop"></div>
-    <div class="modal-card">
-      <button class="modal-close" id="modalClose" aria-label="Close"><i class="fas fa-times"></i></button>
-      <div class="modal-media" id="modalMedia"></div>
-      <div class="modal-body">
-        <div class="modal-top">
-          <h3 id="modalTitle"></h3>
-          <span class="modal-badge" id="modalBadge"></span>
-        </div>
-        <p id="modalDesc"></p>
-        <div class="chip-row" id="modalTech"></div>
-        <div class="modal-actions" id="modalActions"></div>
+<!-- ══ ABOUT ══ -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="section-eyebrow reveal">01 / ABOUT</div>
+    <h2 class="about-head reveal">I make on-chain claims verifiable, not just believable.</h2>
+    <div class="about-body reveal">
+      <p>
+        Most of my recent work sits at the boundary where an autonomous agent meets real
+        money: <strong>warden</strong>, a self-hosted trading agent for BNB Smart Chain
+        where every cap the agent operates under — per-trade, daily, drawdown, key expiry —
+        is enforced by the account contract itself, not by application code that a bug or a
+        prompt-injected message could talk around. It's a port and re-architecture of an
+        upstream project; my own build is the PancakeSwap&nbsp;v3 venue layer, the TWAP
+        pricing guards, and the on-chain breaker contracts that make the safety claims true
+        on this chain.
+      </p>
+      <p>
+        Before that: Python and Django backends — APIs, webhook signature verification,
+        database policy hardening, the layer where a quiet bug becomes a very loud incident.
+        That instinct carried over directly into how I think about on-chain systems.
+      </p>
+      <div class="chip-row">
+        <span class="chip">On-chain policy enforcement</span>
+        <span class="chip">TWAP pricing guards</span>
+        <span class="chip">Row-Level Security hardening</span>
+        <span class="chip">Webhook signature verification</span>
+        <span class="chip">Redis-backed rate limiting</span>
       </div>
     </div>
   </div>
+</section>
 
-  <script src="js/main.js"></script>
+<!-- ══ WORK ══ -->
+<section class="work" id="work">
+  <div class="section-eyebrow reveal">02 / SELECTED WORK</div>
+  <h2 class="work-head reveal">Projects</h2>
+  <p class="work-sub reveal">Ordered by relevance, not recency. Click a panel for the full spec.</p>
+  <div class="project-grid" id="projectGrid"></div>
+</section>
+
+<!-- ══ EXPERIENCE ══ -->
+<section class="experience" id="experience">
+  <div class="section-eyebrow reveal">03 / EXPERIENCE</div>
+  <h2 class="exp-head reveal">Revision history</h2>
+
+  <div class="rev-table reveal">
+    <div class="rev-row rev-row--head">
+      <span>REV</span><span>ROLE</span><span>ORG</span><span>PERIOD</span>
+    </div>
+    <div class="rev-row">
+      <span class="rev-n">005</span>
+      <span class="rev-role">Senior Developer</span>
+      <span>Ighodalo Labs, Lagos</span>
+      <span>Dec 2025 — Present</span>
+    </div>
+    <div class="rev-row">
+      <span class="rev-n">004</span>
+      <span class="rev-role">Technical Consultant &amp; Senior Developer</span>
+      <span>AlgoTrading with Ighodalo, Remote</span>
+      <span>Jan 2026 — Mar 2026</span>
+    </div>
+    <div class="rev-row">
+      <span class="rev-n">003</span>
+      <span class="rev-role">Technical Consultant</span>
+      <span>FarmSquare, Remote</span>
+      <span>Dec 2025 — Jan 2026</span>
+    </div>
+    <div class="rev-row">
+      <span class="rev-n">002</span>
+      <span class="rev-role">Backend Developer</span>
+      <span>Panda Tech, Remote</span>
+      <span>Jul 2025 — Dec 2025</span>
+    </div>
+    <div class="rev-row">
+      <span class="rev-n">001</span>
+      <span class="rev-role">Backend Developer</span>
+      <span>ITMS, University of Ibadan</span>
+      <span>Sep 2024 — May 2025</span>
+    </div>
+    <div class="rev-row">
+      <span class="rev-n">000</span>
+      <span class="rev-role">Blockchain Developer</span>
+      <span>Paycrest, Remote</span>
+      <span>May 2024 — Aug 2024</span>
+    </div>
+  </div>
+  <p class="rev-note reveal">Full history, including Renager (2021–2022), is on the résumé.</p>
+</section>
+
+<!-- ══ CONTACT — drawn as a title block ══ -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="section-eyebrow reveal">04 / CONTACT</div>
+    <h2 class="contact-head reveal">Let's build something that has to hold.</h2>
+    <p class="contact-sub reveal">Open to remote backend and smart-contract roles, and freelance contracts. Payable in stablecoins.</p>
+
+    <div class="title-block reveal">
+      <div class="tb-row">
+        <span class="tb-k">NAME</span><span class="tb-v">Oluwabukunmi Odukoya</span>
+        <span class="tb-k">DRAWN BY</span><span class="tb-v">O.O.</span>
+      </div>
+      <div class="tb-row">
+        <span class="tb-k">EMAIL</span><span class="tb-v"><a href="mailto:bukunmiodukoya@gmail.com">bukunmiodukoya@gmail.com</a></span>
+        <span class="tb-k">PHONE</span><span class="tb-v"><a href="tel:+2347073394962">+234 707 339 4962</a></span>
+      </div>
+      <div class="tb-row">
+        <span class="tb-k">GITHUB</span><span class="tb-v"><a href="https://github.com/kunmmi" target="_blank" rel="noopener">github.com/kunmmi</a></span>
+        <span class="tb-k">LINKEDIN</span><span class="tb-v"><a href="https://linkedin.com/in/oluwabukunmi-odukoya" target="_blank" rel="noopener">in/oluwabukunmi-odukoya</a></span>
+      </div>
+      <div class="tb-row">
+        <span class="tb-k">LOCATION</span><span class="tb-v">Ibadan, Nigeria</span>
+        <span class="tb-k">SCALE</span><span class="tb-v">Remote, any timezone</span>
+      </div>
+    </div>
+
+    <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener" class="btn btn-solid reveal">
+      Download résumé <span class="arrow">↓</span>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <span>&copy; <span id="year"></span> Oluwabukunmi Odukoya</span>
+  <span>Drawn in Ibadan, Nigeria.</span>
+</footer>
+
+<!-- ══ PROJECT MODAL ══ -->
+<div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+    <div class="modal-top">
+      <span class="modal-eyebrow" id="modalEyebrow"></span>
+      <h3 id="modalTitle"></h3>
+    </div>
+    <p id="modalDesc"></p>
+    <div class="chip-row" id="modalTech"></div>
+    <div class="modal-actions" id="modalActions"></div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
