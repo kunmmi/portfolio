@@ -3,305 +3,171 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Oluwabukunmi Odukoya — Backend engineer. Solidity, ERC-4337 account abstraction, BNB Smart Chain. Based in Ibadan, Nigeria." />
-<title>Oluwabukunmi Odukoya — Backend Engineer</title>
-
+<meta name="description" content="Oluwabukunmi Odukoya — backend engineer. Solidity, TypeScript, Python. Based in Ibadan, Nigeria." />
+<title>Oluwabukunmi Odukoya</title>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Big+Shoulders:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<!-- corner registration marks -->
-<div class="reg reg-tl">+</div>
-<div class="reg reg-tr">+</div>
-<div class="reg reg-bl">+</div>
-<div class="reg reg-br">+</div>
-
-<!-- ══ NAV ══ -->
-<nav class="navbar" id="navbar">
-  <div class="nav-inner">
-    <a href="#top" class="nav-brand">
-      <span class="nav-brand-mark">OO</span>
-      <span class="nav-brand-txt">Odukoya<em>.</em></span>
-    </a>
-    <div class="nav-links">
-      <a href="#about"><span class="nav-num">01</span> About</a>
-      <a href="#work"><span class="nav-num">02</span> Work</a>
-      <a href="#experience"><span class="nav-num">03</span> Experience</a>
-      <a href="#contact"><span class="nav-num">04</span> Contact</a>
-    </div>
-    <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener" class="nav-resume">
-      Résumé <span class="arrow">↗</span>
-    </a>
-    <button class="nav-burger" id="navBurger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="nav-mobile" id="navMobile">
-    <a href="#about">01 — About</a>
-    <a href="#work">02 — Work</a>
-    <a href="#experience">03 — Experience</a>
-    <a href="#contact">04 — Contact</a>
-    <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener">Résumé ↗</a>
-  </div>
-</nav>
-
-<!-- ══ HERO ══ -->
-<header class="hero" id="top">
-  <div class="blueprint-grid" aria-hidden="true"></div>
-
-  <div class="hero-inner">
-    <div class="hero-copy">
-      <div class="dwg-tag reveal">
-        <span class="dwg-dot"></span>
-        DWG&nbsp;NO. OKO&#8209;2026&#8209;01 &nbsp;·&nbsp; STATUS: OPEN&nbsp;TO&nbsp;WORK
-      </div>
-
-      <h1 class="hero-name reveal">
-        <span class="line">OLUWABUKUNMI</span>
-        <span class="line hero-name-accent">ODUKOYA</span>
-      </h1>
-
-      <p class="hero-role reveal">Backend Engineer — Solidity · ERC&#8209;4337 · BNB&nbsp;Smart&nbsp;Chain</p>
-
-      <p class="hero-tag reveal">
-        I build the layer that makes on-chain systems trustworthy without asking anyone
-        to trust me: account-contract caps, TWAP-guarded pricing, and a policy wall a
-        compromised agent can't talk its way past.
-      </p>
-
-      <div class="hero-cta reveal">
-        <a href="#work" class="btn btn-solid">View selected work</a>
-        <a href="#contact" class="btn btn-outline">Get in touch</a>
-      </div>
-
-      <div class="hero-socials reveal">
-        <a href="https://github.com/kunmmi" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
-        <a href="https://linkedin.com/in/oluwabukunmi-odukoya" target="_blank" rel="noopener" aria-label="LinkedIn">IN</a>
-        <a href="mailto:bukunmiodukoya@gmail.com" aria-label="Email">@</a>
-      </div>
-    </div>
-
-    <div class="hero-diagram reveal" aria-label="Diagram: how warden's on-chain policy wall enforces caps">
-      <svg viewBox="0 0 520 560" fill="none" xmlns="http://www.w3.org/2000/svg" class="schematic">
-
-        <!-- dimension line top -->
-        <line x1="20" y1="30" x2="500" y2="30" stroke="var(--line-dim)" stroke-width="1" stroke-dasharray="2 4"/>
-        <line x1="20" y1="22" x2="20" y2="38" stroke="var(--line-dim)" stroke-width="1"/>
-        <line x1="500" y1="22" x2="500" y2="38" stroke="var(--line-dim)" stroke-width="1"/>
-        <text x="260" y="20" text-anchor="middle" class="dim-label">FIG. 01 — POLICY WALL, END TO END</text>
-
-        <!-- box 1: strategist -->
-        <rect x="150" y="55" width="220" height="56" rx="2" class="node-box"/>
-        <text x="260" y="79" text-anchor="middle" class="node-label">STRATEGIST / TELEGRAM</text>
-        <text x="260" y="96" text-anchor="middle" class="node-sub">proposes an intent</text>
-
-        <!-- arrow down -->
-        <line x1="260" y1="111" x2="260" y2="150" class="flow-line"/>
-        <polygon points="260,158 254,146 266,146" class="flow-arrow"/>
-        <text x="278" y="140" class="flow-label">typed, closed enum</text>
-
-        <!-- box 2: policy wall (emphasized) -->
-        <rect x="110" y="160" width="300" height="86" rx="2" class="node-box node-box--wall"/>
-        <text x="260" y="188" text-anchor="middle" class="node-label node-label--wall">ON&#8209;CHAIN POLICY WALL</text>
-        <text x="260" y="206" text-anchor="middle" class="node-sub">per-trade · daily · ops/day · drawdown</text>
-        <text x="260" y="222" text-anchor="middle" class="node-sub">BreakerRegistry + KernelBreakerPolicy</text>
-        <rect x="110" y="160" width="300" height="86" rx="2" class="node-box-stamp"/>
-        <text x="392" y="252" text-anchor="end" class="stamp-text">CAPS ENFORCED</text>
-
-        <!-- arrow down -->
-        <line x1="260" y1="246" x2="260" y2="285" class="flow-line"/>
-        <polygon points="260,293 254,281 266,281" class="flow-arrow"/>
-        <text x="278" y="275" class="flow-label">quote simulation</text>
-
-        <!-- box 3: account contract -->
-        <rect x="130" y="295" width="260" height="56" rx="2" class="node-box"/>
-        <text x="260" y="319" text-anchor="middle" class="node-label">ACCOUNT CONTRACT</text>
-        <text x="260" y="336" text-anchor="middle" class="node-sub">ERC-4337 · Kernel v3.3 session key</text>
-
-        <!-- arrow down -->
-        <line x1="260" y1="351" x2="260" y2="390" class="flow-line"/>
-        <polygon points="260,398 254,386 266,386" class="flow-arrow"/>
-
-        <!-- box 4: venue -->
-        <rect x="150" y="400" width="220" height="56" rx="2" class="node-box"/>
-        <text x="260" y="424" text-anchor="middle" class="node-label">PANCAKESWAP V3</text>
-        <text x="260" y="441" text-anchor="middle" class="node-sub">15-min TWAP · depth floor</text>
-
-        <!-- side annotation bracket -->
-        <path d="M 425 160 L 440 160 L 440 246 L 425 246" class="bracket"/>
-        <text x="447" y="207" class="side-label" transform="rotate(90 447 207)">MY BUILD</text>
-
-        <!-- bottom dimension -->
-        <line x1="20" y1="500" x2="500" y2="500" stroke="var(--line-dim)" stroke-width="1" stroke-dasharray="2 4"/>
-        <text x="260" y="522" text-anchor="middle" class="dim-label">SCALE — N/A &nbsp;·&nbsp; CHAIN — BSC 56/97</text>
-      </svg>
-    </div>
-  </div>
+<header class="site-head">
+  <a href="#top" class="brand">Oluwabukunmi Odukoya</a>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener">Résumé</a>
+  </nav>
 </header>
 
-<!-- ══ STATS STRIP ══ -->
-<section class="stats reveal-group">
-  <div class="stat reveal">
-    <span class="stat-num">4+</span>
-    <span class="stat-label">Years backend</span>
-  </div>
-  <div class="stat reveal">
-    <span class="stat-num">2</span>
-    <span class="stat-label">Custom Solidity contracts shipped</span>
-  </div>
-  <div class="stat reveal">
-    <span class="stat-num">ERC&#8209;4337</span>
-    <span class="stat-label">Account abstraction focus</span>
-  </div>
-  <div class="stat reveal">
-    <span class="stat-num">NG&nbsp;→&nbsp;∞</span>
-    <span class="stat-label">Ibadan, remote-ready</span>
-  </div>
-</section>
+<main id="top">
 
-<!-- ══ ABOUT ══ -->
-<section class="about" id="about">
-  <div class="about-inner">
-    <div class="section-eyebrow reveal">01 / ABOUT</div>
-    <h2 class="about-head reveal">I make on-chain claims verifiable, not just believable.</h2>
-    <div class="about-body reveal">
-      <p>
-        Most of my recent work sits at the boundary where an autonomous agent meets real
-        money: <strong>warden</strong>, a self-hosted trading agent for BNB Smart Chain
-        where every cap the agent operates under — per-trade, daily, drawdown, key expiry —
-        is enforced by the account contract itself, not by application code that a bug or a
-        prompt-injected message could talk around. It's a port and re-architecture of an
-        upstream project; my own build is the PancakeSwap&nbsp;v3 venue layer, the TWAP
-        pricing guards, and the on-chain breaker contracts that make the safety claims true
-        on this chain.
-      </p>
-      <p>
-        Before that: Python and Django backends — APIs, webhook signature verification,
-        database policy hardening, the layer where a quiet bug becomes a very loud incident.
-        That instinct carried over directly into how I think about on-chain systems.
-      </p>
-      <div class="chip-row">
-        <span class="chip">On-chain policy enforcement</span>
-        <span class="chip">TWAP pricing guards</span>
-        <span class="chip">Row-Level Security hardening</span>
-        <span class="chip">Webhook signature verification</span>
-        <span class="chip">Redis-backed rate limiting</span>
+  <section class="intro">
+    <p class="eyebrow">Backend engineer</p>
+    <h1>I write backend code, and lately most of it enforces rules on-chain rather than in application logic.</h1>
+    <p class="lede">
+      My current work is on <a href="https://github.com/kunmmi/warden" target="_blank" rel="noopener">warden</a>,
+      a self-hosted trading agent for BNB Smart Chain. The interesting part isn't the trading —
+      it's that spending limits are enforced by the account contract itself, so even a fully
+      compromised agent can't move money past them. Before that, backend work in Python and
+      Django. I'm based in Ibadan, Nigeria, and open to remote roles and contract work, paid in
+      stablecoins if that's easier for you.
+    </p>
+    <p class="links">
+      <a href="mailto:bukunmiodukoya@gmail.com">bukunmiodukoya@gmail.com</a>
+      <a href="https://github.com/kunmmi" target="_blank" rel="noopener">github.com/kunmmi</a>
+      <a href="https://linkedin.com/in/oluwabukunmi-odukoya" target="_blank" rel="noopener">LinkedIn</a>
+    </p>
+  </section>
+
+  <section class="about">
+    <img src="assets/headshot.png" alt="Oluwabukunmi Odukoya" class="about-photo" />
+    <p>
+      warden is a port of an upstream trading-agent project onto BNB Smart Chain, not something
+      I built from zero. What's mine in it: the PancakeSwap v3 venue layer, a 15-minute TWAP
+      pricing model that refuses to trust a thinly-traded pool, and two Solidity contracts
+      (<code>BreakerRegistry</code> and <code>KernelBreakerPolicy</code>) that trip a drawdown
+      breaker at the account level instead of in the worker process, where a bug could get
+      quietly skipped.
+    </p>
+    <p>
+      Before Solidity, four years of Python and Django — APIs, webhook signature verification,
+      database policy hardening. Same instinct, different chain: assume the thing calling your
+      code is lying, and check anyway.
+    </p>
+  </section>
+
+  <section id="work" class="work">
+    <h2>Selected work</h2>
+
+    <article class="project">
+      <div class="project-head">
+        <h3>warden</h3>
+        <span class="project-links">
+          <a href="https://github.com/kunmmi/warden" target="_blank" rel="noopener">Code</a>
+        </span>
       </div>
-    </div>
-  </div>
-</section>
+      <p>Self-hosted trading agent for BNB Smart Chain. On-chain caps (per-trade, daily, drawdown), enforced by an ERC-4337 account contract rather than the worker process.</p>
+      <p class="stack">Solidity · ERC-4337 · Kernel v3.3 · TypeScript · Next.js · PancakeSwap v3</p>
+    </article>
 
-<!-- ══ WORK ══ -->
-<section class="work" id="work">
-  <div class="section-eyebrow reveal">02 / SELECTED WORK</div>
-  <h2 class="work-head reveal">Projects</h2>
-  <p class="work-sub reveal">Ordered by relevance, not recency. Click a panel for the full spec.</p>
-  <div class="project-grid" id="projectGrid"></div>
-</section>
-
-<!-- ══ EXPERIENCE ══ -->
-<section class="experience" id="experience">
-  <div class="section-eyebrow reveal">03 / EXPERIENCE</div>
-  <h2 class="exp-head reveal">Revision history</h2>
-
-  <div class="rev-table reveal">
-    <div class="rev-row rev-row--head">
-      <span>REV</span><span>ROLE</span><span>ORG</span><span>PERIOD</span>
-    </div>
-    <div class="rev-row">
-      <span class="rev-n">005</span>
-      <span class="rev-role">Senior Developer</span>
-      <span>Ighodalo Labs, Lagos</span>
-      <span>Dec 2025 — Present</span>
-    </div>
-    <div class="rev-row">
-      <span class="rev-n">004</span>
-      <span class="rev-role">Technical Consultant &amp; Senior Developer</span>
-      <span>AlgoTrading with Ighodalo, Remote</span>
-      <span>Jan 2026 — Mar 2026</span>
-    </div>
-    <div class="rev-row">
-      <span class="rev-n">003</span>
-      <span class="rev-role">Technical Consultant</span>
-      <span>FarmSquare, Remote</span>
-      <span>Dec 2025 — Jan 2026</span>
-    </div>
-    <div class="rev-row">
-      <span class="rev-n">002</span>
-      <span class="rev-role">Backend Developer</span>
-      <span>Panda Tech, Remote</span>
-      <span>Jul 2025 — Dec 2025</span>
-    </div>
-    <div class="rev-row">
-      <span class="rev-n">001</span>
-      <span class="rev-role">Backend Developer</span>
-      <span>ITMS, University of Ibadan</span>
-      <span>Sep 2024 — May 2025</span>
-    </div>
-    <div class="rev-row">
-      <span class="rev-n">000</span>
-      <span class="rev-role">Blockchain Developer</span>
-      <span>Paycrest, Remote</span>
-      <span>May 2024 — Aug 2024</span>
-    </div>
-  </div>
-  <p class="rev-note reveal">Full history, including Renager (2021–2022), is on the résumé.</p>
-</section>
-
-<!-- ══ CONTACT — drawn as a title block ══ -->
-<section class="contact" id="contact">
-  <div class="contact-inner">
-    <div class="section-eyebrow reveal">04 / CONTACT</div>
-    <h2 class="contact-head reveal">Let's build something that has to hold.</h2>
-    <p class="contact-sub reveal">Open to remote backend and smart-contract roles, and freelance contracts. Payable in stablecoins.</p>
-
-    <div class="title-block reveal">
-      <div class="tb-row">
-        <span class="tb-k">NAME</span><span class="tb-v">Oluwabukunmi Odukoya</span>
-        <span class="tb-k">DRAWN BY</span><span class="tb-v">O.O.</span>
+    <article class="project">
+      <div class="project-head">
+        <h3>Token Launch Intelligence</h3>
+        <span class="project-links">
+          <a href="https://github.com/kunmmi/token-launch-intel" target="_blank" rel="noopener">Code</a>
+        </span>
       </div>
-      <div class="tb-row">
-        <span class="tb-k">EMAIL</span><span class="tb-v"><a href="mailto:bukunmiodukoya@gmail.com">bukunmiodukoya@gmail.com</a></span>
-        <span class="tb-k">PHONE</span><span class="tb-v"><a href="tel:+2347073394962">+234 707 339 4962</a></span>
+      <p>Multi-venue token-launch monitoring across Pump.fun, Pons, and Flap, with actual on-chain launch execution rather than just alerts.</p>
+      <p class="stack">TypeScript · Multi-venue execution</p>
+    </article>
+
+    <article class="project">
+      <div class="project-head">
+        <h3>Predict Market</h3>
+        <span class="project-links">
+          <a href="https://github.com/kunmmi/Predict-market" target="_blank" rel="noopener">Code</a>
+          <a href="https://predict-market-xi.vercel.app" target="_blank" rel="noopener">Live</a>
+        </span>
       </div>
-      <div class="tb-row">
-        <span class="tb-k">GITHUB</span><span class="tb-v"><a href="https://github.com/kunmmi" target="_blank" rel="noopener">github.com/kunmmi</a></span>
-        <span class="tb-k">LINKEDIN</span><span class="tb-v"><a href="https://linkedin.com/in/oluwabukunmi-odukoya" target="_blank" rel="noopener">in/oluwabukunmi-odukoya</a></span>
+      <p>Crypto prediction market MVP. Binary yes/no trading, in-app wallets, a referral system, Row-Level Security in Supabase, cron-job settlement.</p>
+      <p class="stack">TypeScript · Next.js · PostgreSQL · Supabase</p>
+    </article>
+
+    <article class="project">
+      <div class="project-head">
+        <h3>Whisper</h3>
+        <span class="project-links">
+          <a href="https://github.com/kunmmi/whisper" target="_blank" rel="noopener">Code</a>
+          <a href="https://whisper-chat-flow.vercel.app/" target="_blank" rel="noopener">Live</a>
+        </span>
       </div>
-      <div class="tb-row">
-        <span class="tb-k">LOCATION</span><span class="tb-v">Ibadan, Nigeria</span>
-        <span class="tb-k">SCALE</span><span class="tb-v">Remote, any timezone</span>
+      <p>Real-time chat app. Group chats, typing indicators, read receipts, offline message queuing, built across six phases with a full test suite.</p>
+      <p class="stack">Node.js · Socket.IO · React · SQLite</p>
+    </article>
+
+    <article class="project">
+      <div class="project-head">
+        <h3>Student ID Card Tracker</h3>
+        <span class="project-links">
+          <a href="https://github.com/kunmmi/Student-id-card-status-tracker" target="_blank" rel="noopener">Code</a>
+          <a href="https://student-id-tracker.vercel.app" target="_blank" rel="noopener">Live</a>
+        </span>
       </div>
+      <p>Built at ITMS, University of Ibadan. Tracks ID card production status for 10,000+ students, from submission to collection.</p>
+      <p class="stack">Python · Flask · SQLAlchemy</p>
+    </article>
+
+    <p class="more">
+      A few smaller things — a Telegram bot that screens Base/ETH tokens for scam signals, a
+      GitHub Actions invoice generator, an agricultural marketplace I consulted on — are on
+      <a href="https://github.com/kunmmi" target="_blank" rel="noopener">GitHub</a>.
+    </p>
+  </section>
+
+  <section id="experience" class="experience">
+    <h2>Experience</h2>
+
+    <div class="job">
+      <div class="job-head"><h3>Senior Developer, Ighodalo Labs</h3><span>Dec 2025 — Present</span></div>
+      <p>Set Git workflow standards, led weekly code reviews, mentored junior developers on backend architecture.</p>
+    </div>
+    <div class="job">
+      <div class="job-head"><h3>Technical Consultant &amp; Senior Developer, AlgoTrading with Ighodalo</h3><span>Jan — Mar 2026</span></div>
+      <p>Led architecture and delivery of a trading platform for MetaTrader 5 Expert Advisors.</p>
+    </div>
+    <div class="job">
+      <div class="job-head"><h3>Technical Consultant, FarmSquare</h3><span>Dec 2025 — Jan 2026</span></div>
+      <p>Advised on architecture and Paystack integration for an agricultural marketplace.</p>
+    </div>
+    <div class="job">
+      <div class="job-head"><h3>Backend Developer, Panda Tech</h3><span>Jul — Dec 2025</span></div>
+      <p>Shipped REST APIs and blockchain integrations — token analytics, wallet event processing.</p>
+    </div>
+    <div class="job">
+      <div class="job-head"><h3>Backend Developer, ITMS, University of Ibadan</h3><span>Sep 2024 — May 2025</span></div>
+      <p>Built the Django backend behind the ID card tracker above.</p>
+    </div>
+    <div class="job">
+      <div class="job-head"><h3>Blockchain Developer, Paycrest</h3><span>May — Aug 2024</span></div>
+      <p>Smart contracts on Ethereum and Hyperledger for a decentralized payment application.</p>
     </div>
 
-    <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener" class="btn btn-solid reveal">
-      Download résumé <span class="arrow">↓</span>
-    </a>
-  </div>
-</section>
+    <p class="more"><a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener">Full résumé, including earlier roles →</a></p>
+  </section>
 
-<footer class="footer">
-  <span>&copy; <span id="year"></span> Oluwabukunmi Odukoya</span>
-  <span>Drawn in Ibadan, Nigeria.</span>
+  <section class="now">
+    <h2>Right now</h2>
+    <p>Looking for remote backend or smart-contract engineering roles, or short contracts.</p>
+  </section>
+
+</main>
+
+<footer>
+  <span>Oluwabukunmi Odukoya</span>
+  <span>Ibadan, Nigeria</span>
 </footer>
-
-<!-- ══ PROJECT MODAL ══ -->
-<div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true">
-  <div class="modal-backdrop" id="modalBackdrop"></div>
-  <div class="modal-card">
-    <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
-    <div class="modal-top">
-      <span class="modal-eyebrow" id="modalEyebrow"></span>
-      <h3 id="modalTitle"></h3>
-    </div>
-    <p id="modalDesc"></p>
-    <div class="chip-row" id="modalTech"></div>
-    <div class="modal-actions" id="modalActions"></div>
-  </div>
-</div>
 
 <script src="js/main.js"></script>
 </body>
