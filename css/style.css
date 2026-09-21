@@ -1,11 +1,11 @@
 :root {
-  --bg:      #16150f;
-  --text:    #ece7db;
-  --text-2:  #a39c8b;
-  --accent:  #c98a5b;
-  --line:    rgba(236, 231, 219, 0.12);
-  --serif: 'Newsreader', Georgia, serif;
-  --mono:  'IBM Plex Mono', 'Courier New', monospace;
+  --bg:      #12151a;
+  --text:    #e7e9ea;
+  --text-2:  #99a3a8;
+  --accent:  #7c9473;
+  --line:    rgba(231, 233, 234, 0.12);
+  --serif: 'Archivo', -apple-system, sans-serif;
+  --mono:  'Archivo', -apple-system, sans-serif;
   --max: 640px;
 }
 
