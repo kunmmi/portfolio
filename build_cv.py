@@ -103,8 +103,7 @@ hdr = Table(
         Paragraph(
             'bukunmiodukoya@gmail.com<br/>'
             '+234 707 339 4962<br/>'
-            'github.com/kunmmi<br/>'
-            'linkedin.com/in/oluwabukunmi-odukoya',
+            'github.com/kunmmi',
             ST['contact']
         ),
     ]],
