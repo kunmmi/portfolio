@@ -1,15 +1,34 @@
-// Carousel: prev/next buttons scroll by one slide width.
+// Carousel: prev/next buttons scroll by one slide width, dots jump to
+// a slide directly, and the active dot tracks scroll position.
 const carousel = document.getElementById('carousel');
 const prevBtn = document.querySelector('.car-prev');
 const nextBtn = document.querySelector('.car-next');
+const dots = Array.from(document.querySelectorAll('.car-dot'));
+const slides = Array.from(document.querySelectorAll('.project'));
+
 if (carousel && prevBtn && nextBtn) {
-  const scrollByOne = (dir) => {
-    const slide = carousel.querySelector('.project');
-    const width = slide ? slide.getBoundingClientRect().width + 20 : carousel.clientWidth;
-    carousel.scrollBy({ left: dir * width, behavior: 'smooth' });
-  };
-  prevBtn.addEventListener('click', () => scrollByOne(-1));
-  nextBtn.addEventListener('click', () => scrollByOne(1));
+  const slideStep = () => (slides[0] ? slides[0].getBoundingClientRect().width + 20 : carousel.clientWidth);
+  prevBtn.addEventListener('click', () => carousel.scrollBy({ left: -slideStep(), behavior: 'smooth' }));
+  nextBtn.addEventListener('click', () => carousel.scrollBy({ left: slideStep(), behavior: 'smooth' }));
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      carousel.scrollTo({ left: slides[i].offsetLeft - slides[0].offsetLeft, behavior: 'smooth' });
+    });
+  });
+
+  if (slides.length && 'IntersectionObserver' in window) {
+    const dotIO = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const idx = slides.indexOf(entry.target);
+          dots.forEach((d) => d.classList.remove('is-active'));
+          if (dots[idx]) dots[idx].classList.add('is-active');
+        }
+      });
+    }, { root: carousel, threshold: 0.6 });
+    slides.forEach((s) => dotIO.observe(s));
+  }
 }
 
 // The only animated thing on this page besides the carousel: the warden

@@ -155,7 +155,7 @@ h2 {
 .carousel::-webkit-scrollbar { display: none; }
 .project {
   scroll-snap-align: start;
-  flex: 0 0 100%;
+  flex: 0 0 94%;
   min-width: 0;
 }
 .project-head {
@@ -174,16 +174,27 @@ h2 {
 
 .car-btn {
   flex-shrink: 0;
-  width: 34px; height: 34px;
-  border: 1px solid var(--line);
+  width: 40px; height: 40px;
+  border: 1.5px solid var(--accent);
   background: none;
-  color: var(--text-2);
+  color: var(--accent);
   border-radius: 50%;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1;
   cursor: pointer;
 }
-.car-btn:hover { color: var(--accent); border-color: var(--accent); }
+.car-btn:hover { background: var(--accent); color: var(--bg); }
+
+.car-dots { display: flex; gap: 8px; justify-content: center; margin-top: 18px; }
+.car-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--line);
+  padding: 0;
+  cursor: pointer;
+}
+.car-dot.is-active { background: var(--accent); }
 
 .flow-diagram { width: 100%; max-width: 460px; height: auto; margin: 4px 0 16px; display: block; }
 .flow-diagram rect { fill: none; stroke: var(--line); stroke-width: 1.2; }
