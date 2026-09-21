@@ -115,6 +115,18 @@ h2 {
 .project-links a:hover { color: var(--accent); }
 .project p:not(.stack) { color: var(--text-2); font-size: 16.5px; margin-bottom: 6px; }
 .stack { font-family: var(--mono); font-size: 12px; color: var(--text-2); opacity: 0.7; }
+
+.flow-diagram { width: 100%; max-width: 460px; height: auto; margin: 14px 0; display: block; }
+.flow-diagram rect { fill: none; stroke: var(--line); stroke-width: 1.2; }
+.flow-diagram rect.fb { stroke: var(--accent); }
+.flow-diagram text {
+  font-family: var(--mono); font-size: 11px; fill: var(--text-2);
+  text-anchor: middle;
+}
+.flow-diagram text.tb { fill: var(--accent); font-size: 12px; }
+.flow-diagram text.tb-sub { fill: var(--text-2); font-size: 9.5px; }
+.flow-diagram .fa { stroke: var(--line); stroke-width: 1.2; }
+.flow-diagram .fa-h { fill: var(--line); }
 .more { color: var(--text-2); font-size: 15px; }
 .more a { color: var(--text-2); }
 .more a:hover { color: var(--accent); }

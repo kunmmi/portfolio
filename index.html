@@ -5,6 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="Oluwabukunmi Odukoya — backend engineer. Solidity, TypeScript, Python. Based in Ibadan, Nigeria." />
 <title>Oluwabukunmi Odukoya</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<meta name="theme-color" content="#16150f" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://kunmisportfolio.xyz/" />
+<meta property="og:title" content="Oluwabukunmi Odukoya — Backend Engineer" />
+<meta property="og:description" content="Solidity, ERC-4337 account abstraction, and BNB Smart Chain. Backend work in Python and Django before that." />
+<meta property="og:image" content="https://kunmisportfolio.xyz/assets/headshot.png" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Oluwabukunmi Odukoya — Backend Engineer" />
+<meta name="twitter:description" content="Solidity, ERC-4337 account abstraction, and BNB Smart Chain." />
+<meta name="twitter:image" content="https://kunmisportfolio.xyz/assets/headshot.png" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -69,6 +82,19 @@
         </span>
       </div>
       <p>Self-hosted trading agent for BNB Smart Chain. On-chain caps (per-trade, daily, drawdown), enforced by an ERC-4337 account contract rather than the worker process.</p>
+      <svg class="flow-diagram" viewBox="0 0 500 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agent proposes a trade, the on-chain policy wall checks it against caps, then the account contract executes.">
+        <rect x="0" y="8" width="140" height="40" rx="3"/>
+        <text x="70" y="32">Agent proposes</text>
+        <path d="M144 28 L176 28" class="fa"/>
+        <polygon points="176,28 168,24 168,32" class="fa-h"/>
+        <rect x="180" y="4" width="150" height="48" rx="3" class="fb"/>
+        <text x="255" y="24" class="tb">Policy wall</text>
+        <text x="255" y="40" class="tb-sub">checks caps on-chain</text>
+        <path d="M334 28 L366 28" class="fa"/>
+        <polygon points="366,28 358,24 358,32" class="fa-h"/>
+        <rect x="370" y="8" width="130" height="40" rx="3"/>
+        <text x="435" y="32">Executes</text>
+      </svg>
       <p class="stack">Solidity · ERC-4337 · Kernel v3.3 · TypeScript · Next.js · PancakeSwap v3</p>
     </article>
 
