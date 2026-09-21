@@ -1,6 +1,19 @@
-// The only animated thing on this page: the warden flow diagram plays
-// once, when it scrolls into view — explaining the sequence, not
-// decorating the page.
+// Carousel: prev/next buttons scroll by one slide width.
+const carousel = document.getElementById('carousel');
+const prevBtn = document.querySelector('.car-prev');
+const nextBtn = document.querySelector('.car-next');
+if (carousel && prevBtn && nextBtn) {
+  const scrollByOne = (dir) => {
+    const slide = carousel.querySelector('.project');
+    const width = slide ? slide.getBoundingClientRect().width + 20 : carousel.clientWidth;
+    carousel.scrollBy({ left: dir * width, behavior: 'smooth' });
+  };
+  prevBtn.addEventListener('click', () => scrollByOne(-1));
+  nextBtn.addEventListener('click', () => scrollByOne(1));
+}
+
+// The only animated thing on this page besides the carousel: the warden
+// flow diagram plays once, when it scrolls into view.
 const flow = document.getElementById('wardenFlow');
 if (flow && 'IntersectionObserver' in window) {
   const io = new IntersectionObserver((entries) => {
