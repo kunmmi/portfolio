@@ -96,7 +96,7 @@ hdr = Table(
             Paragraph('Oluwabukunmi Odukoya', ST['name']),
             Spacer(1, 5),
             Paragraph(
-                'Senior Backend Engineer &nbsp;·&nbsp; Python &nbsp;·&nbsp; Node.js &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; Web3',
+                'Backend Engineer &nbsp;·&nbsp; Solidity &nbsp;·&nbsp; ERC-4337 &nbsp;·&nbsp; TypeScript &nbsp;·&nbsp; BNB Smart Chain',
                 ST['tag']
             ),
         ],
@@ -124,13 +124,14 @@ story.append(hdr)
 # ── Summary ───────────────────────────────────────────────
 story += sec('Professional Summary')
 story.append(Paragraph(
-    'Senior Backend Engineer with 4+ years delivering production-grade APIs, blockchain '
-    'solutions, and automation systems across fintech, Web3, and institutional platforms. '
-    'Deep expertise in <b>Python (Django, FastAPI)</b>, <b>Node.js</b>, and <b>TypeScript</b>, '
-    'with a proven track record of improving transaction efficiency by <b>30%</b>, cutting '
-    'operational costs by <b>30%</b>, and shipping real systems at institutional scale. '
-    'Experienced in leading code reviews, defining architectural standards, and mentoring '
-    'engineers. Seeking a senior or lead backend role in a high-impact engineering team.',
+    'Backend engineer with 4+ years shipping production APIs and blockchain systems, now '
+    'focused on <b>Solidity</b> and <b>ERC-4337 account abstraction</b> on <b>BNB Smart '
+    'Chain</b>. Built a custom on-chain policy layer (<b>BreakerRegistry</b> + a Kernel v3 '
+    'module) enforcing per-trade, daily, and drawdown caps at the account-contract level, '
+    'plus a PancakeSwap v3 venue layer with TWAP-based pricing guards against pool '
+    'manipulation. Backend core in <b>Python (Django, FastAPI)</b> and <b>TypeScript</b>, '
+    'with prior experience leading code reviews, defining architectural standards, and '
+    'mentoring engineers. Seeking a remote backend or smart-contract engineering role.',
     ST['body']
 ))
 
@@ -204,6 +205,23 @@ story += sec('Selected Projects')
 
 projects = [
     {
+        'title': 'Warden &mdash; Self-Hosted Trading Agents (BNB Smart Chain)',
+        'stack': 'Solidity  |  ERC-4337  |  Kernel v3.3  |  TypeScript  |  Next.js  |  Electron  |  PancakeSwap v3',
+        'link':  'github.com/kunmmi/warden',
+        'bullets': [
+            'Port and re-architecture of an upstream trading-agent project onto BNB Smart Chain. Built the PancakeSwap v3 venue layer, a 15-minute TWAP valuation model with pool-depth and price-divergence guards, and the on-chain token registry.',
+            'Designed BreakerRegistry + KernelBreakerPolicy, a custom Kernel v3 module (type 5) that enforces per-trade, daily, and drawdown caps at the account-contract level &mdash; caps hold even if the off-chain agent is fully compromised.',
+        ]
+    },
+    {
+        'title': 'Token Launch Intelligence',
+        'stack': 'TypeScript  |  Multi-Venue On-Chain Execution  |  Pump.fun  |  Pons  |  Flap',
+        'link':  'github.com/kunmmi/token-launch-intel',
+        'bullets': [
+            'Real-time, multi-venue token-launch intelligence platform with actual on-chain launch execution (not just monitoring) across Pump.fun, Pons, and Flap.',
+        ]
+    },
+    {
         'title': 'Predict Market',
         'stack': 'TypeScript  |  Next.js  |  PostgreSQL  |  Supabase  |  GitHub Actions  |  Vercel',
         'link':  'predict-market-xi.vercel.app   |   github.com/kunmmi/Predict-market',
@@ -240,15 +258,6 @@ projects = [
         ]
     },
     {
-        'title': 'Base ETH Token Scanner',
-        'stack': 'Python  |  Telegram Bot API  |  Web3.py  |  Ethereum / Base Chain  |  Render',
-        'link':  'github.com/kunmmi/Base-eth-token-scanner',
-        'bullets': [
-            'Production Telegram bot for Web3 communities automating token scanning and DeFi analytics (liquidity, buy/sell tax) on the Base/Ethereum chain.',
-            'Deployed on Render with health checks, edge-case DeFi test coverage, and robust on-chain failure handling.',
-        ]
-    },
-    {
         'title': 'Invoice Automation System',
         'stack': 'TypeScript  |  GitHub Actions  |  Monday.com API  |  Cron Schedule',
         'link':  'github.com/kunmmi/ccc-invoice-automation',
@@ -279,7 +288,7 @@ skill_rows = [
     ('Languages',         'Python  |  TypeScript  |  JavaScript  |  SQL  |  Bash'),
     ('Frameworks',        'Django  |  FastAPI  |  Node.js  |  Express  |  Next.js  |  React  |  SQLAlchemy  |  Socket.IO'),
     ('Databases',         'PostgreSQL  |  MySQL  |  SQLite  |  Supabase (Row-Level Security)'),
-    ('Blockchain / Web3', 'Ethereum  |  Hyperledger  |  Solidity  |  Web3.py  |  EVM  |  DeFi Protocols'),
+    ('Blockchain / Web3', 'Solidity  |  ERC-4337 Account Abstraction  |  BNB Smart Chain  |  Ethereum  |  Hyperledger  |  Web3.py  |  EVM  |  DeFi Protocols'),
     ('DevOps &amp; Cloud',    'Git  |  GitHub Actions  |  Docker  |  AWS  |  Render  |  Vercel  |  Linux'),
     ('Practices',         'REST API Design  |  Code Review  |  TDD  |  Microservices  |  CI/CD  |  Agile / Scrum'),
 ]
