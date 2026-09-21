@@ -26,20 +26,20 @@
 <body>
 
 <header class="site-head">
-  <a href="#top" class="brand u-anim">Oluwabukunmi Odukoya</a>
+  <a href="#top" class="brand">Oluwabukunmi Odukoya</a>
   <nav>
-    <a href="#work" class="u-anim">Work</a>
-    <a href="#experience" class="u-anim">Experience</a>
-    <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener" class="u-anim">Résumé</a>
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener">Résumé</a>
   </nav>
 </header>
 
 <main id="top">
 
   <section class="intro">
-    <p class="eyebrow rise">Backend engineer — open to remote work</p>
-    <h1 class="rise" style="animation-delay: 0.08s;">I write backend code, and lately most of it enforces rules on-chain rather than in application logic.</h1>
-    <p class="lede rise" style="animation-delay: 0.16s;">
+    <p class="eyebrow">Backend engineer — open to remote work</p>
+    <h1>I write backend code, and lately most of it enforces rules on-chain rather than in application logic.</h1>
+    <p class="lede">
       My current work is on <a href="https://github.com/kunmmi/warden" target="_blank" rel="noopener">warden</a>,
       a self-hosted trading agent for BNB Smart Chain. The interesting part isn't the trading —
       it's that spending limits are enforced by the account contract itself, so even a fully
@@ -47,10 +47,10 @@
       Django. I'm based in Ibadan, Nigeria, and open to remote roles and contract work, paid in
       stablecoins if that's easier for you.
     </p>
-    <p class="links rise" style="animation-delay: 0.24s;">
-      <a href="mailto:bukunmiodukoya@gmail.com" class="u-anim">bukunmiodukoya@gmail.com</a>
-      <a href="https://github.com/kunmmi" target="_blank" rel="noopener" class="u-anim">github.com/kunmmi</a>
-      <a href="https://linkedin.com/in/oluwabukunmi-odukoya" target="_blank" rel="noopener" class="u-anim">LinkedIn</a>
+    <p class="links">
+      <a href="mailto:bukunmiodukoya@gmail.com">bukunmiodukoya@gmail.com</a>
+      <a href="https://github.com/kunmmi" target="_blank" rel="noopener">github.com/kunmmi</a>
+      <a href="https://linkedin.com/in/oluwabukunmi-odukoya" target="_blank" rel="noopener">LinkedIn</a>
     </p>
   </section>
 
@@ -72,7 +72,7 @@
   </section>
 
   <section id="work" class="work">
-    <h2 class="reveal">Selected work</h2>
+    <h2>Selected work</h2>
 
     <article class="project">
       <div class="project-head">
@@ -82,18 +82,19 @@
         </span>
       </div>
       <p>Self-hosted trading agent for BNB Smart Chain. On-chain caps (per-trade, daily, drawdown), enforced by an ERC-4337 account contract rather than the worker process.</p>
-      <svg class="flow-diagram" viewBox="0 0 500 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agent proposes a trade, the on-chain policy wall checks it against caps, then the account contract executes.">
+      <svg id="wardenFlow" class="flow-diagram" viewBox="0 0 500 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agent proposes a trade, the on-chain policy wall checks it against caps, then the account contract executes.">
         <rect x="0" y="8" width="140" height="40" rx="3"/>
         <text x="70" y="32">Agent proposes</text>
-        <path d="M144 28 L176 28" class="fa"/>
-        <polygon points="176,28 168,24 168,32" class="fa-h"/>
+        <path d="M144 28 L176 28" class="fa fa-1"/>
+        <polygon points="176,28 168,24 168,32" class="fa-h fa-h-1"/>
         <rect x="180" y="4" width="150" height="48" rx="3" class="fb"/>
         <text x="255" y="24" class="tb">Policy wall</text>
         <text x="255" y="40" class="tb-sub">checks caps on-chain</text>
-        <path d="M334 28 L366 28" class="fa"/>
-        <polygon points="366,28 358,24 358,32" class="fa-h"/>
+        <path d="M334 28 L366 28" class="fa fa-2"/>
+        <polygon points="366,28 358,24 358,32" class="fa-h fa-h-2"/>
         <rect x="370" y="8" width="130" height="40" rx="3"/>
         <text x="435" y="32">Executes</text>
+        <circle class="signal" r="3.5" cx="0" cy="28"/>
       </svg>
       <p class="stack">Solidity · ERC-4337 · Kernel v3.3 · TypeScript · Next.js · PancakeSwap v3</p>
     </article>
@@ -153,7 +154,7 @@
   </section>
 
   <section id="experience" class="experience">
-    <h2 class="reveal">Experience</h2>
+    <h2>Experience</h2>
 
     <div class="job">
       <div class="job-head"><h3>Senior Developer, Ighodalo Labs</h3><span>Dec 2025 — Present</span></div>
@@ -179,7 +180,7 @@
   </section>
 
   <section class="now">
-    <h2 class="reveal">Right now</h2>
+    <h2>Right now</h2>
     <p>Looking for remote backend or smart-contract engineering roles, or short contracts.</p>
   </section>
 

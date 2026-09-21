@@ -11,12 +11,8 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
-
 body {
-  background:
-    radial-gradient(var(--line) 1px, transparent 1px) 0 0 / 28px 28px,
-    var(--bg);
+  background: var(--bg);
   color: var(--text);
   font-family: var(--serif);
   font-size: 18px;
@@ -24,30 +20,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a { color: inherit; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; transition: color 0.2s ease, text-decoration-color 0.2s ease; }
+a { color: inherit; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
 a:hover { text-decoration-color: var(--accent); color: var(--accent); }
-
-/* animated underline for nav / contact-style links (no default underline) */
-.u-anim {
-  position: relative;
-  text-decoration: none !important;
-  background-image: linear-gradient(var(--accent), var(--accent));
-  background-repeat: no-repeat;
-  background-position: 0 100%;
-  background-size: 0% 1px;
-  transition: background-size 0.25s ease, color 0.2s ease;
-  padding-bottom: 1px;
-}
-.u-anim:hover { background-size: 100% 1px; color: var(--accent); }
-
-@keyframes rise {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.rise { animation: rise 0.6s cubic-bezier(.2,.7,.3,1) both; }
-
-.reveal { opacity: 0; transform: translateY(12px); transition: opacity 0.6s cubic-bezier(.2,.7,.3,1), transform 0.6s cubic-bezier(.2,.7,.3,1); }
-.reveal.is-visible { opacity: 1; transform: translateY(0); }
 
 code {
   font-family: var(--mono);
@@ -72,7 +46,8 @@ code {
 }
 .brand { text-decoration: none; color: var(--text); }
 .site-head nav { display: flex; gap: 20px; }
-.site-head nav a { color: var(--text-2); }
+.site-head nav a { text-decoration: none; color: var(--text-2); }
+.site-head nav a:hover { color: var(--accent); }
 
 main { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 
@@ -96,7 +71,8 @@ main { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 .lede { color: var(--text-2); font-size: 17px; margin-bottom: 28px; }
 .lede a { color: var(--text); }
 .links { font-family: var(--mono); font-size: 13px; display: flex; gap: 18px; flex-wrap: wrap; }
-.links a { color: var(--text-2); }
+.links a { text-decoration: none; color: var(--text-2); }
+.links a:hover { color: var(--accent); }
 
 /* ── About ───────────────────────────────────── */
 .about { padding: 30px 0 56px; border-top: 1px solid var(--line); }
@@ -123,8 +99,7 @@ h2 {
 
 /* ── Work ────────────────────────────────────── */
 .work { padding: 56px 0; border-top: 1px solid var(--line); }
-.project { margin-bottom: 34px; padding: 14px 16px; margin-inline: -16px; border-radius: 8px; transition: background 0.25s ease, transform 0.25s ease; }
-.project:hover { background: rgba(231, 233, 234, 0.035); transform: translateY(-2px); }
+.project { margin-bottom: 34px; }
 .project:last-of-type { margin-bottom: 24px; }
 .project-head {
   display: flex;
@@ -152,6 +127,49 @@ h2 {
 .flow-diagram text.tb-sub { fill: var(--text-2); font-size: 9.5px; }
 .flow-diagram .fa { stroke: var(--line); stroke-width: 1.2; }
 .flow-diagram .fa-h { fill: var(--line); }
+
+/* signal animation: plays once, only for the warden diagram, only when it's in view */
+.flow-diagram .fa-1, .flow-diagram .fa-2 {
+  stroke-dasharray: 32;
+  stroke-dashoffset: 32;
+  animation: draw-arrow 0.45s ease forwards;
+  animation-play-state: paused;
+}
+.flow-diagram .fa-2 { animation-delay: 1.3s; }
+@keyframes draw-arrow { to { stroke-dashoffset: 0; } }
+
+.flow-diagram .fa-h-1, .flow-diagram .fa-h-2 {
+  opacity: 0;
+  animation: fade-in 0.2s ease forwards;
+  animation-play-state: paused;
+}
+.flow-diagram .fa-h-1 { animation-delay: 0.45s; }
+.flow-diagram .fa-h-2 { animation-delay: 1.75s; }
+@keyframes fade-in { to { opacity: 1; } }
+
+.flow-diagram .signal {
+  fill: var(--accent);
+  opacity: 0;
+  animation: travel 2.1s ease-in-out forwards;
+  animation-play-state: paused;
+}
+@keyframes travel {
+  0%   { opacity: 1; cx: 10; }
+  15%  { cx: 140; }
+  35%  { cx: 176; }
+  62%  { cx: 180; }
+  80%  { cx: 330; }
+  96%  { cx: 490; }
+  100% { opacity: 0; cx: 490; }
+}
+
+.flow-diagram.in-view .fa-1,
+.flow-diagram.in-view .fa-2,
+.flow-diagram.in-view .fa-h-1,
+.flow-diagram.in-view .fa-h-2,
+.flow-diagram.in-view .signal {
+  animation-play-state: running;
+}
 .more { color: var(--text-2); font-size: 15px; }
 .more a { color: var(--text-2); }
 .more a:hover { color: var(--accent); }
