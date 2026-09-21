@@ -6,14 +6,14 @@ from reportlab.lib.enums import TA_RIGHT, TA_JUSTIFY
 from reportlab.platypus import (SimpleDocTemplate, Paragraph, Spacer,
                                  HRFlowable, Table, TableStyle, KeepTogether)
 
-# ── Palette ──────────────────────────────────────────────
-DARK   = HexColor('#0f172a')
-ACC    = HexColor('#6d28d9')
-ACC_L  = HexColor('#ede9fe')
-ACC_D  = HexColor('#0c0618')
-MID    = HexColor('#334155')
-MUTED  = HexColor('#64748b')
-LGRAY  = HexColor('#e2e8f0')
+# ── Palette (matches kunmisportfolio.xyz: charcoal + moss green) ──
+DARK   = HexColor('#12151a')
+ACC    = HexColor('#7c9473')
+ACC_L  = HexColor('#eef1ec')
+ACC_D  = HexColor('#0d0f12')
+MID    = HexColor('#2b2f33')
+MUTED  = HexColor('#6b7178')
+LGRAY  = HexColor('#e3e5e2')
 
 PAGE_W, PAGE_H = A4
 LM = RM = 0.55 * inch
@@ -27,9 +27,9 @@ def ps(name, **kw):
 
 ST = {
     # ── Header (dark bg) ──
-    'name':    ps('name',    fontName='Helvetica-Bold',    fontSize=22,  leading=26,  textColor=HexColor('#f8fafc')),
-    'tag':     ps('tag',     fontName='Helvetica',          fontSize=8.5, leading=12,  textColor=HexColor('#a78bfa')),
-    'contact': ps('contact', fontName='Helvetica',          fontSize=8,   leading=13,  textColor=HexColor('#cbd5e1'), alignment=TA_RIGHT),
+    'name':    ps('name',    fontName='Helvetica-Bold',    fontSize=22,  leading=26,  textColor=HexColor('#e7e9ea')),
+    'tag':     ps('tag',     fontName='Helvetica',          fontSize=8.5, leading=12,  textColor=HexColor('#9fb894')),
+    'contact': ps('contact', fontName='Helvetica',          fontSize=8,   leading=13,  textColor=HexColor('#c7ccc8'), alignment=TA_RIGHT),
     # ── Section label ──
     'sec':     ps('sec',     fontName='Helvetica-Bold',    fontSize=7.5, leading=10,  textColor=ACC),
     # ── Body ──
@@ -56,11 +56,11 @@ def sec(title):
     ]))
     return [Spacer(1, 8), tbl, Spacer(1, 5)]
 
-# ── Purple bullet ─────────────────────────────────────────
+# ── Bullet ──────────────────────────────────────────────
 def bul(text):
     return Paragraph(
         '<bullet bulletIndent="-10" bulletFontName="Helvetica" '
-        'bulletFontSize="9.5" bulletColor="#6d28d9">&#x2022;</bullet> ' + text,
+        'bulletFontSize="9.5" bulletColor="#7c9473">&#x2022;</bullet> ' + text,
         ST['bul']
     )
 
