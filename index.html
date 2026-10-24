@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="description" content="Oluwabukunmi Odukoya — backend engineer. Solidity, TypeScript, Python. Based in Ibadan, Nigeria." />
-<title>Oluwabukunmi Odukoya</title>
+<meta name="description" content="Oluwabukunmi Odukoya — backend & smart-contract engineer. Solidity, TypeScript, Python. Based in Ibadan, Nigeria." />
+<title>Oluwabukunmi Odukoya — Backend & Smart-Contract Engineer</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-<meta name="theme-color" content="#12151a" />
+<meta name="theme-color" content="#0a080c" />
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://kunmisportfolio.xyz/" />
@@ -20,213 +20,317 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
+<!-- Loader: covers the first paint while fonts + WebGL spin up -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-marquee"><span>BACKEND ENGINEER • SMART CONTRACTS • BACKEND ENGINEER • SMART CONTRACTS •&nbsp;</span><span>BACKEND ENGINEER • SMART CONTRACTS • BACKEND ENGINEER • SMART CONTRACTS •&nbsp;</span></div>
+  <div class="loader-pill"><span>Loading</span><span id="loaderPct">0%</span></div>
+</div>
+
+<!-- Fixed 3D scene, sits behind every section -->
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="glow glow-a" aria-hidden="true"></div>
+<div class="glow glow-b" aria-hidden="true"></div>
+
 <header class="site-head">
-  <a href="#top" class="brand">Oluwabukunmi Odukoya</a>
+  <a href="#top" class="brand" aria-label="Back to top">OO</a>
+  <a href="mailto:bukunmiodukoya@gmail.com" class="head-mail">bukunmiodukoya@gmail.com</a>
   <nav>
-    <a href="#about">About</a>
-    <a href="#work">Projects</a>
-    <a href="#experience">Experience</a>
-    <a href="#contact">Contact</a>
+    <a href="#about" data-hover="ABOUT"><span>ABOUT</span></a>
+    <a href="#work" data-hover="WORK"><span>WORK</span></a>
+    <a href="#contact" data-hover="CONTACT"><span>CONTACT</span></a>
   </nav>
 </header>
 
+<aside class="side-socials" aria-label="Social links">
+  <a href="https://github.com/kunmmi" target="_blank" rel="noopener" aria-label="GitHub">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.74.4-1.26.73-1.55-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.38 2.89-.39.98.01 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.28 5.69.42.36.78 1.08.78 2.17v3.22c0 .3.21.66.79.55A10.51 10.51 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5Z"/></svg>
+  </a>
+  <a href="mailto:bukunmiodukoya@gmail.com" aria-label="Email">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg>
+  </a>
+</aside>
+
+<a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener" class="resume-link">
+  RESUME
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2h9l5 5v15H6z"/><path d="M14 2v6h6M9 13h8M9 17h8"/></svg>
+</a>
+
 <main id="top">
 
+  <!-- ── Hero ─────────────────────────────────────── -->
   <section class="hero">
-    <div class="hero-text">
-      <p class="eyebrow">Hi, I'm Oluwabukunmi</p>
-      <h1>Backend engineer, specializing in on-chain policy systems and scalable APIs.</h1>
-      <p class="hero-loc">Ibadan, Nigeria</p>
-      <div class="hero-cta">
-        <a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener" class="btn">Résumé</a>
-        <a href="https://github.com/kunmmi" target="_blank" rel="noopener" class="icon-btn" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.57.1.78-.25.78-.55v-2.1c-3.2.7-3.87-1.36-3.87-1.36-.53-1.33-1.29-1.69-1.29-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.74.4-1.26.73-1.55-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18.92-.26 1.91-.38 2.89-.39.98.01 1.97.13 2.89.39 2.21-1.49 3.18-1.18 3.18-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.41-5.28 5.69.42.36.78 1.08.78 2.17v3.22c0 .3.21.66.79.55A10.51 10.51 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5Z"/></svg>
-        </a>
-        <a href="mailto:bukunmiodukoya@gmail.com" class="icon-btn" aria-label="Email">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg>
-        </a>
-      </div>
+    <div class="hero-name">
+      <p class="hero-hi">Hello!</p>
+      <p class="hero-im">I'm</p>
+      <h1>OLUWABUKUNMI<br />ODUKOYA</h1>
     </div>
-    <img src="assets/headshot.png" alt="Oluwabukunmi Odukoya" class="hero-photo" />
+    <div class="hero-role">
+      <p class="hero-a">A</p>
+      <div class="role-stack" aria-live="polite">
+        <span class="role-word is-active">BACKEND</span>
+        <span class="role-word">SOLIDITY</span>
+        <span class="role-word">API</span>
+      </div>
+      <p class="hero-engineer">ENGINEER</p>
+    </div>
+    <p class="hero-loc">Ibadan, Nigeria · open to remote</p>
+    <div class="scroll-hint" aria-hidden="true"><span></span></div>
   </section>
 
+  <!-- ── About ────────────────────────────────────── -->
   <section id="about" class="about">
-    <h2>About me</h2>
-    <p>
-      My current work is on <a href="https://github.com/kunmmi/warden" target="_blank" rel="noopener">warden</a>,
-      a self-hosted trading agent for BNB Smart Chain. warden is a port of an upstream
-      trading-agent project onto BNB Smart Chain, not something I built from zero. What's mine in
-      it: the PancakeSwap v3 venue layer, a 15-minute TWAP pricing model that refuses to trust a
-      thinly-traded pool, and two Solidity contracts (<code>BreakerRegistry</code> and
-      <code>KernelBreakerPolicy</code>) that trip a drawdown breaker at the account level instead
-      of in the worker process, where a bug could get quietly skipped.
-    </p>
-    <p>
-      Before Solidity, four years of Python and Django — APIs, webhook signature verification,
-      database policy hardening. Same instinct, different chain: assume the thing calling your
-      code is lying, and check anyway.
-    </p>
-    <p>
-      I studied Computer Science at the University of Ibadan. Open to remote roles and contract
-      work, and can be paid in stablecoins if that's easier on your end.
+    <p class="section-tag">About me</p>
+    <p class="about-text" data-split>
+      I'm a backend engineer who moved from four years of Python and Django into Solidity. My
+      current work is warden, a self-hosted trading agent for BNB Smart Chain, where I built the
+      PancakeSwap v3 venue layer, a 15-minute TWAP pricing model that won't trust a thin pool,
+      and two contracts that trip a drawdown breaker at the account level instead of in the
+      worker process. Same instinct on every chain: assume the thing calling your code is lying,
+      and check anyway. On the side, I build the odd browser game.
     </p>
   </section>
 
-  <section id="work" class="work">
-    <h2>Projects</h2>
+  <!-- ── What I do ────────────────────────────────── -->
+  <section class="whatido">
+    <h2 class="whatido-title">WHAT<br />I DO</h2>
+    <div class="cards">
+      <article class="card" tabindex="0">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <h3>SMART CONTRACTS</h3>
+        <p class="card-sub">On-chain policy &amp; account abstraction</p>
+        <p class="card-body">Solidity contracts that enforce rules at the account level: ERC-4337 smart accounts, Kernel policies, per-trade and drawdown caps, and venue integrations like PancakeSwap v3.</p>
+        <div class="card-more">
+          <p class="card-label">Skillset &amp; tools</p>
+          <div class="tags"><span>Solidity</span><span>ERC-4337</span><span>Kernel v3.3</span><span>Hardhat</span><span>Foundry</span><span>viem</span><span>BNB Chain</span><span>Ethereum</span></div>
+        </div>
+        <span class="card-toggle" aria-hidden="true"></span>
+      </article>
+      <article class="card" tabindex="0">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <h3>BACKEND</h3>
+        <p class="card-sub">APIs, data &amp; the boring parts that must not break</p>
+        <p class="card-body">REST APIs and services in Python and TypeScript: webhook signature verification, row-level security, background settlement jobs, real-time messaging, and Postgres schemas built to stay correct.</p>
+        <div class="card-more">
+          <p class="card-label">Skillset &amp; tools</p>
+          <div class="tags"><span>Python</span><span>Django</span><span>FastAPI</span><span>TypeScript</span><span>Node.js</span><span>PostgreSQL</span><span>Supabase</span><span>Docker</span></div>
+        </div>
+        <span class="card-toggle" aria-hidden="true"></span>
+      </article>
+    </div>
+  </section>
 
-    <div class="carousel-wrap">
-      <button class="car-btn car-prev" aria-label="Previous project">‹</button>
-      <div class="carousel" id="carousel">
+  <!-- ── Career ───────────────────────────────────── -->
+  <section id="experience" class="career">
+    <h2 class="career-title">My career &amp;<br /><span>experience</span></h2>
+    <div class="timeline">
+      <div class="timeline-line"><span class="timeline-fill"></span></div>
 
-        <article class="project">
-          <img src="assets/warden-thumb.jpg" alt="warden dashboard — live positions, wallet balances, and the kill-switch panel" class="project-thumb" loading="lazy" />
-          <div class="project-head">
-            <h3>warden</h3>
-            <span class="project-links"><a href="https://github.com/kunmmi/warden" target="_blank" rel="noopener">Code</a></span>
-          </div>
-          <p>Self-hosted trading agent for BNB Smart Chain. On-chain caps (per-trade, daily, drawdown), enforced by an ERC-4337 account contract rather than the worker process.</p>
-          <svg id="wardenFlow" class="flow-diagram" viewBox="0 0 500 56" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agent proposes a trade, the on-chain policy wall checks it against caps, then the account contract executes.">
-            <rect x="0" y="8" width="140" height="40" rx="3"/>
-            <text x="70" y="32">Agent proposes</text>
-            <path d="M144 28 L176 28" class="fa fa-1"/>
-            <polygon points="176,28 168,24 168,32" class="fa-h fa-h-1"/>
-            <rect x="180" y="4" width="150" height="48" rx="3" class="fb"/>
-            <text x="255" y="24" class="tb">Policy wall</text>
-            <text x="255" y="40" class="tb-sub">checks caps on-chain</text>
-            <path d="M334 28 L366 28" class="fa fa-2"/>
-            <polygon points="366,28 358,24 358,32" class="fa-h fa-h-2"/>
-            <rect x="370" y="8" width="130" height="40" rx="3"/>
-            <text x="435" y="32">Executes</text>
-            <circle class="signal" r="3.5" cx="0" cy="28"/>
-          </svg>
-          <div class="pills">
-            <span class="pill">Solidity</span><span class="pill">ERC-4337</span><span class="pill">Kernel v3.3</span><span class="pill">TypeScript</span><span class="pill">Next.js</span><span class="pill">PancakeSwap v3</span>
-          </div>
-        </article>
-
-        <article class="project">
-          <img src="assets/token-launch-intel-thumb.jpg" alt="Token Launch Intelligence live launch tape — real launches across Pump.fun, Pons, and Flap" class="project-thumb" loading="lazy" />
-          <div class="project-head">
-            <h3>Token Launch Intelligence</h3>
-            <span class="project-links"><a href="https://github.com/kunmmi/token-launch-intel" target="_blank" rel="noopener">Code</a></span>
-          </div>
-          <p>Multi-venue token-launch monitoring across Pump.fun, Pons, and Flap, with actual on-chain launch execution rather than just alerts.</p>
-          <div class="pills"><span class="pill">TypeScript</span><span class="pill">Multi-venue execution</span></div>
-        </article>
-
-        <article class="project">
-          <img src="assets/predict-market-thumb.jpg" alt="Predict Market homepage — live prediction markets and featured event" class="project-thumb" loading="lazy" />
-          <div class="project-head">
-            <h3>Predict Market</h3>
-            <span class="project-links">
-              <a href="https://github.com/kunmmi/Predict-market" target="_blank" rel="noopener">Code</a>
-              <a href="https://predict-market-xi.vercel.app" target="_blank" rel="noopener">Live</a>
-            </span>
-          </div>
-          <p>Crypto prediction market MVP. Binary yes/no trading, in-app wallets, a referral system, Row-Level Security in Supabase, cron-job settlement.</p>
-          <div class="pills"><span class="pill">TypeScript</span><span class="pill">Next.js</span><span class="pill">PostgreSQL</span><span class="pill">Supabase</span></div>
-        </article>
-
-        <article class="project">
-          <img src="assets/whisper-thumb.jpg" alt="Whisper chat interface — conversation list and an open thread" class="project-thumb" loading="lazy" />
-          <div class="project-head">
-            <h3>Whisper</h3>
-            <span class="project-links">
-              <a href="https://github.com/kunmmi/whisper" target="_blank" rel="noopener">Code</a>
-              <a href="https://whisper-chat-flow.vercel.app/" target="_blank" rel="noopener">Live</a>
-            </span>
-          </div>
-          <p>Real-time chat app. Group chats, typing indicators, read receipts, offline message queuing, built across six phases with a full test suite.</p>
-          <div class="pills"><span class="pill">Node.js</span><span class="pill">Socket.IO</span><span class="pill">React</span><span class="pill">SQLite</span></div>
-        </article>
-
-        <article class="project">
-          <img src="assets/student-id-thumb.jpg" alt="Student ID Card Tracker homepage — status check and staff login" class="project-thumb" loading="lazy" />
-          <div class="project-head">
-            <h3>Student ID Card Tracker</h3>
-            <span class="project-links">
-              <a href="https://github.com/kunmmi/Student-id-card-status-tracker" target="_blank" rel="noopener">Code</a>
-              <a href="https://student-id-tracker.vercel.app" target="_blank" rel="noopener">Live</a>
-            </span>
-          </div>
-          <p>Built at ITMS, University of Ibadan. Tracks ID card production status for 10,000+ students, from submission to collection.</p>
-          <div class="pills"><span class="pill">Python</span><span class="pill">Flask</span><span class="pill">SQLAlchemy</span></div>
-        </article>
-
+      <div class="job">
+        <div class="job-role"><h3>Senior Developer</h3><p>Ighodalo Labs</p></div>
+        <span class="job-year">NOW</span>
+        <p class="job-desc">Set Git workflow standards, lead weekly code reviews, and mentor junior developers on backend architecture.</p>
       </div>
-      <button class="car-btn car-next" aria-label="Next project">›</button>
+      <div class="job">
+        <div class="job-role"><h3>Technical Consultant &amp; Senior Developer</h3><p>AlgoTrading with Ighodalo</p></div>
+        <span class="job-year">2026</span>
+        <p class="job-desc">Led architecture and delivery of a trading platform for MetaTrader 5 Expert Advisors.</p>
+      </div>
+      <div class="job">
+        <div class="job-role"><h3>Technical Consultant</h3><p>FarmSquare</p></div>
+        <span class="job-year">2025</span>
+        <p class="job-desc">Advised on architecture and Paystack integration for an agricultural marketplace.</p>
+      </div>
+      <div class="job">
+        <div class="job-role"><h3>Backend Developer</h3><p>Panda Tech</p></div>
+        <span class="job-year">2025</span>
+        <p class="job-desc">Shipped REST APIs and blockchain integrations: token analytics and wallet event processing.</p>
+      </div>
+      <div class="job">
+        <div class="job-role"><h3>Backend Developer</h3><p>ITMS, University of Ibadan</p></div>
+        <span class="job-year">2024</span>
+        <p class="job-desc">Built the Django backend that tracks ID card production for 10,000+ students.</p>
+      </div>
     </div>
-
-    <div class="car-dots" id="carDots">
-      <button class="car-dot is-active" aria-label="Go to project 1"></button>
-      <button class="car-dot" aria-label="Go to project 2"></button>
-      <button class="car-dot" aria-label="Go to project 3"></button>
-      <button class="car-dot" aria-label="Go to project 4"></button>
-      <button class="car-dot" aria-label="Go to project 5"></button>
-    </div>
-
-    <p class="more">
-      A few smaller things — a Telegram bot that screens Base/ETH tokens for scam signals, a
-      GitHub Actions invoice generator, an agricultural marketplace I consulted on — are on
-      <a href="https://github.com/kunmmi" target="_blank" rel="noopener">GitHub</a>.
-    </p>
+    <p class="career-more"><a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener">Full résumé, including earlier roles →</a></p>
   </section>
 
-  <section class="tech">
-    <h2>Technologies</h2>
-    <div class="pills pills-lg">
-      <span class="pill">Solidity</span><span class="pill">ERC-4337</span><span class="pill">TypeScript</span>
-      <span class="pill">Python</span><span class="pill">Django</span><span class="pill">FastAPI</span>
-      <span class="pill">Next.js</span><span class="pill">Node.js</span><span class="pill">PostgreSQL</span>
-      <span class="pill">Supabase</span><span class="pill">Docker</span>
+  <!-- ── Work ─────────────────────────────────────── -->
+  <section id="work" class="work">
+    <h2 class="work-title">My <span>Work</span></h2>
+    <ol class="work-list">
+      <li class="work-item" data-thumb="assets/warden-thumb.jpg">
+        <span class="work-num">01</span>
+        <div class="work-main">
+          <h3>warden</h3>
+          <p class="work-cat">On-chain trading agent</p>
+        </div>
+        <div class="work-tools">
+          <p class="card-label">Tools and features</p>
+          <p>Solidity, ERC-4337, Kernel v3.3, TypeScript, Next.js, PancakeSwap v3</p>
+        </div>
+        <div class="work-links"><a href="https://github.com/kunmmi/warden" target="_blank" rel="noopener">Code ↗</a></div>
+      </li>
+      <li class="work-item" data-thumb="assets/token-launch-intel-thumb.jpg">
+        <span class="work-num">02</span>
+        <div class="work-main">
+          <h3>Token Launch Intelligence</h3>
+          <p class="work-cat">Multi-venue monitoring</p>
+        </div>
+        <div class="work-tools">
+          <p class="card-label">Tools and features</p>
+          <p>TypeScript, Pump.fun, Pons, Flap, on-chain launch execution</p>
+        </div>
+        <div class="work-links"><a href="https://github.com/kunmmi/token-launch-intel" target="_blank" rel="noopener">Code ↗</a></div>
+      </li>
+      <li class="work-item" data-thumb="assets/predict-market-thumb.jpg">
+        <span class="work-num">03</span>
+        <div class="work-main">
+          <h3>Predict Market</h3>
+          <p class="work-cat">Prediction market MVP</p>
+        </div>
+        <div class="work-tools">
+          <p class="card-label">Tools and features</p>
+          <p>TypeScript, Next.js, PostgreSQL, Supabase RLS, cron settlement</p>
+        </div>
+        <div class="work-links">
+          <a href="https://github.com/kunmmi/Predict-market" target="_blank" rel="noopener">Code ↗</a>
+          <a href="https://predict-market-xi.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+        </div>
+      </li>
+      <li class="work-item" data-thumb="assets/whisper-thumb.jpg">
+        <span class="work-num">04</span>
+        <div class="work-main">
+          <h3>Whisper</h3>
+          <p class="work-cat">Real-time chat</p>
+        </div>
+        <div class="work-tools">
+          <p class="card-label">Tools and features</p>
+          <p>Node.js, Socket.IO, React, SQLite, offline message queue</p>
+        </div>
+        <div class="work-links">
+          <a href="https://github.com/kunmmi/whisper" target="_blank" rel="noopener">Code ↗</a>
+          <a href="https://whisper-chat-flow.vercel.app/" target="_blank" rel="noopener">Live ↗</a>
+        </div>
+      </li>
+      <li class="work-item" data-thumb="assets/student-id-thumb.jpg">
+        <span class="work-num">05</span>
+        <div class="work-main">
+          <h3>Student ID Card Tracker</h3>
+          <p class="work-cat">Built at ITMS, UI</p>
+        </div>
+        <div class="work-tools">
+          <p class="card-label">Tools and features</p>
+          <p>Python, Flask, SQLAlchemy, 10,000+ students tracked</p>
+        </div>
+        <div class="work-links">
+          <a href="https://github.com/kunmmi/Student-id-card-status-tracker" target="_blank" rel="noopener">Code ↗</a>
+          <a href="https://student-id-tracker.vercel.app" target="_blank" rel="noopener">Live ↗</a>
+        </div>
+      </li>
+      <li class="work-item">
+        <span class="work-num">06</span>
+        <div class="work-main">
+          <h3>Speedrun Ethereum</h3>
+          <p class="work-cat">Solidity challenges on Sepolia</p>
+        </div>
+        <div class="work-tools">
+          <p class="card-label">Tools and features</p>
+          <p>Solidity, Hardhat, Scaffold-ETH 2, ERC-20, ERC-721, verified contracts</p>
+        </div>
+        <div class="work-links">
+          <a href="https://token-vendor-seven-sable.vercel.app" target="_blank" rel="noopener">Token Vendor ↗</a>
+          <a href="https://crowdfund-mauve.vercel.app" target="_blank" rel="noopener">Crowdfund ↗</a>
+          <a href="https://challenge-tokenizationn.vercel.app" target="_blank" rel="noopener">NFTs ↗</a>
+        </div>
+      </li>
+      <li class="work-item" data-thumb="assets/honk-shooter-thumb.jpg">
+        <span class="work-num">07</span>
+        <div class="work-main">
+          <h3>HONK Survive</h3>
+          <p class="work-cat">Side project · browser game</p>
+        </div>
+        <div class="work-tools">
+          <p class="card-label">Tools and features</p>
+          <p>TypeScript, Phaser 3, Vite, pixel art, procedural Web Audio music, mobile touch controls</p>
+        </div>
+        <div class="work-links">
+          <a href="https://game-seven-mu-99.vercel.app" target="_blank" rel="noopener">Play ↗</a>
+        </div>
+      </li>
+      <li class="work-item" data-thumb="assets/honk-slot-thumb.jpg">
+        <span class="work-num">08</span>
+        <div class="work-main">
+          <h3>Honk Slot</h3>
+          <p class="work-cat">Side project · browser game</p>
+        </div>
+        <div class="work-tools">
+          <p class="card-label">Tools and features</p>
+          <p>TypeScript, Next.js, React Three Fiber, Supabase, XRPL signature verification</p>
+        </div>
+        <div class="work-links">
+          <a href="https://honk-slot.vercel.app" target="_blank" rel="noopener">Play ↗</a>
+        </div>
+      </li>
+    </ol>
+    <div class="work-more">
+      <p>Want to see more?</p>
+      <span>A token-screening Telegram bot, a GitHub Actions invoice generator, and more.</span>
+      <a href="https://github.com/kunmmi" target="_blank" rel="noopener" class="pill-btn">See all on GitHub →</a>
     </div>
+    <img class="work-preview" id="workPreview" alt="" aria-hidden="true" />
   </section>
 
-  <section id="experience" class="experience">
-    <h2>Experience</h2>
-
-    <div class="job">
-      <div class="job-head"><h3>Senior Developer, Ighodalo Labs</h3><span>Dec 2025 — Present</span></div>
-      <p>Set Git workflow standards, led weekly code reviews, mentored junior developers on backend architecture.</p>
+  <!-- ── Tech stack ───────────────────────────────── -->
+  <section class="stack">
+    <h2 class="stack-title">TECH STACK</h2>
+    <div class="stack-grid">
+      <span>Solidity</span><span>TypeScript</span><span>Python</span><span>JavaScript</span>
+      <span>ERC-4337</span><span>Hardhat</span><span>Foundry</span><span>viem</span>
+      <span>Django</span><span>FastAPI</span><span>Flask</span><span>Node.js</span>
+      <span>Next.js</span><span>React</span><span>Socket.IO</span><span>PostgreSQL</span>
+      <span>Supabase</span><span>SQLite</span><span>Docker</span><span>Git</span>
+      <span>GitHub Actions</span><span>Vercel</span><span>Linux</span><span>Tailwind</span>
     </div>
-    <div class="job">
-      <div class="job-head"><h3>Technical Consultant &amp; Senior Developer, AlgoTrading with Ighodalo</h3><span>Jan — Mar 2026</span></div>
-      <p>Led architecture and delivery of a trading platform for MetaTrader 5 Expert Advisors.</p>
-    </div>
-    <div class="job">
-      <div class="job-head"><h3>Technical Consultant, FarmSquare</h3><span>Dec 2025 — Jan 2026</span></div>
-      <p>Advised on architecture and Paystack integration for an agricultural marketplace.</p>
-    </div>
-    <div class="job">
-      <div class="job-head"><h3>Backend Developer, Panda Tech</h3><span>Jul — Dec 2025</span></div>
-      <p>Shipped REST APIs and blockchain integrations — token analytics, wallet event processing.</p>
-    </div>
-    <div class="job">
-      <div class="job-head"><h3>Backend Developer, ITMS, University of Ibadan</h3><span>Sep 2024 — May 2025</span></div>
-      <p>Built the Django backend behind the ID card tracker above.</p>
-    </div>
-    <p class="more"><a href="Odukoya-Oluwabukunmi-Senior-Backend-CV.pdf" target="_blank" rel="noopener">Full résumé, including earlier roles →</a></p>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Let's connect</h2>
-    <p>Looking for remote backend or smart-contract engineering roles, or short contracts. Any questions or proposals — reach out.</p>
-    <a href="mailto:bukunmiodukoya@gmail.com" class="btn">Say hello</a>
   </section>
 
 </main>
 
-<footer>
-  <span>Oluwabukunmi Odukoya</span>
-  <span>Ibadan, Nigeria</span>
+<!-- ── Contact ──────────────────────────────────── -->
+<footer id="contact" class="contact">
+  <p class="contact-kicker">Looking for remote backend or smart-contract roles, or short contracts.</p>
+  <h2 class="contact-name">OLUWABUKUNMI ODUKOYA</h2>
+  <div class="contact-grid">
+    <div>
+      <p class="card-label">Email</p>
+      <a href="mailto:bukunmiodukoya@gmail.com">bukunmiodukoya@gmail.com</a>
+    </div>
+    <div>
+      <p class="card-label">Location</p>
+      <p>Ibadan, Nigeria</p>
+    </div>
+    <div>
+      <p class="card-label">Social</p>
+      <a href="https://github.com/kunmmi" target="_blank" rel="noopener">Github ↗</a>
+    </div>
+    <div class="contact-credit">
+      <p>Designed and developed<br />by <span>Oluwabukunmi Odukoya</span></p>
+      <p class="contact-year">© <span id="year">2026</span></p>
+    </div>
+  </div>
+  <a href="mailto:bukunmiodukoya@gmail.com" class="pill-btn pill-btn-lg">Hire Me →</a>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/utils/BufferGeometryUtils.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="js/scene.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
