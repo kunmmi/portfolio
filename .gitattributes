@@ -1,0 +1,8 @@
+# Never line-ending-convert or diff binary files. This repo is edited on
+# Windows with core.autocrlf=true, which would otherwise treat PDFs (mostly
+# ASCII inside) as text and can corrupt them on checkout.
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.glb  binary
