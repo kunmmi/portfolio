@@ -156,6 +156,11 @@ main, footer { position: relative; z-index: 1; }
   font-size: clamp(48px, 6.2vw, 100px); font-weight: 800; font-stretch: 108%; line-height: 1;
   color: transparent; -webkit-text-stroke: 1.5px rgba(236, 232, 239, 0.75);
 }
+.hero-also {
+  margin-top: 14px;
+  font-size: clamp(16px, 1.6vw, 24px); font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--accent);
+}
 .hero-loc {
   position: absolute; left: calc(var(--pad) + 60px); bottom: 64px;
   font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-2);
