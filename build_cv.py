@@ -6,14 +6,16 @@ from reportlab.lib.enums import TA_RIGHT, TA_JUSTIFY
 from reportlab.platypus import (SimpleDocTemplate, Paragraph, Spacer,
                                  HRFlowable, Table, TableStyle, KeepTogether)
 
-# ── Palette (matches kunmisportfolio.xyz: charcoal + moss green) ──
-DARK   = HexColor('#12151a')
-ACC    = HexColor('#7c9473')
-ACC_L  = HexColor('#eef1ec')
-ACC_D  = HexColor('#0d0f12')
-MID    = HexColor('#2b2f33')
-MUTED  = HexColor('#6b7178')
-LGRAY  = HexColor('#e3e5e2')
+# ── Palette (matches kunmisportfolio.xyz: near-black + violet) ──
+# Page stays white for printing; the site's violets are used for accents
+# and the header band uses the site's background colour.
+DARK   = HexColor('#0a080c')   # site --bg
+ACC    = HexColor('#8a4dff')   # site --accent-2 (readable on white)
+ACC_L  = HexColor('#f4effd')   # light violet tint for row striping
+ACC_D  = HexColor('#120e15')   # site --bg-2
+MID    = HexColor('#2a2630')
+MUTED  = HexColor('#6f6878')
+LGRAY  = HexColor('#e6e1ec')
 
 PAGE_W, PAGE_H = A4
 LM = RM = 0.55 * inch
@@ -27,9 +29,9 @@ def ps(name, **kw):
 
 ST = {
     # ── Header (dark bg) ──
-    'name':    ps('name',    fontName='Helvetica-Bold',    fontSize=22,  leading=26,  textColor=HexColor('#e7e9ea')),
-    'tag':     ps('tag',     fontName='Helvetica',          fontSize=8.5, leading=12,  textColor=HexColor('#9fb894')),
-    'contact': ps('contact', fontName='Helvetica',          fontSize=8,   leading=13,  textColor=HexColor('#c7ccc8'), alignment=TA_RIGHT),
+    'name':    ps('name',    fontName='Helvetica-Bold',    fontSize=22,  leading=26,  textColor=HexColor('#ece8ef')),
+    'tag':     ps('tag',     fontName='Helvetica',          fontSize=8.5, leading=12,  textColor=HexColor('#c58aff')),
+    'contact': ps('contact', fontName='Helvetica',          fontSize=8,   leading=13,  textColor=HexColor('#cfc8d6'), alignment=TA_RIGHT),
     # ── Section label ──
     'sec':     ps('sec',     fontName='Helvetica-Bold',    fontSize=7.5, leading=10,  textColor=ACC),
     # ── Body ──
@@ -60,7 +62,7 @@ def sec(title):
 def bul(text):
     return Paragraph(
         '<bullet bulletIndent="-10" bulletFontName="Helvetica" '
-        'bulletFontSize="9.5" bulletColor="#7c9473">&#x2022;</bullet> ' + text,
+        'bulletFontSize="9.5" bulletColor="#8a4dff">&#x2022;</bullet> ' + text,
         ST['bul']
     )
 

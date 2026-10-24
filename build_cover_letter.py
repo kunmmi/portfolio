@@ -5,13 +5,14 @@ from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.enums import TA_JUSTIFY, TA_RIGHT
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable
 
-DARK   = HexColor('#0f172a')
-ACC    = HexColor('#6d28d9')
-ACC_D  = HexColor('#0c0618')
-ACC_L  = HexColor('#ede9fe')
-MID    = HexColor('#334155')
-MUTED  = HexColor('#64748b')
-LGRAY  = HexColor('#e2e8f0')
+# Palette matches kunmisportfolio.xyz and build_cv.py (near-black + violet).
+DARK   = HexColor('#0a080c')
+ACC    = HexColor('#8a4dff')
+ACC_D  = HexColor('#120e15')
+ACC_L  = HexColor('#f4effd')
+MID    = HexColor('#2a2630')
+MUTED  = HexColor('#6f6878')
+LGRAY  = HexColor('#e6e1ec')
 
 PAGE_W, PAGE_H = A4
 LM = RM = 0.75 * inch
@@ -23,8 +24,8 @@ def ps(name, **kw):
     return ParagraphStyle(name, **kw)
 
 ST = {
-    'name':    ps('name',    fontName='Helvetica-Bold',    fontSize=18, leading=22, textColor=HexColor('#f8fafc')),
-    'contact': ps('contact', fontName='Helvetica',          fontSize=8,  leading=13, textColor=HexColor('#c4b5fd'), alignment=TA_RIGHT),
+    'name':    ps('name',    fontName='Helvetica-Bold',    fontSize=18, leading=22, textColor=HexColor('#ece8ef')),
+    'contact': ps('contact', fontName='Helvetica',          fontSize=8,  leading=13, textColor=HexColor('#cfc8d6'), alignment=TA_RIGHT),
     'label':   ps('label',   fontName='Helvetica-Bold',    fontSize=7.5,leading=10, textColor=ACC),
     'company': ps('company', fontName='Helvetica-Bold',    fontSize=11, leading=15, textColor=DARK, spaceBefore=4),
     'date':    ps('date',    fontName='Helvetica',          fontSize=9,  leading=13, textColor=MUTED, spaceAfter=14),
